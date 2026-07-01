@@ -126,7 +126,7 @@ function HomePage() {
         <div className="container-page relative py-18 sm:py-28 lg:py-25">
           <div className="max-w-3xl animate-fade-up">
             <span className="inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              Lisbon · Portugal · Worldwide
+              Braga · Portugal · Worldwide
             </span>
             <h1 className="mt-6 font-display text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
               Empowering Education, Innovation & Global Collaboration
@@ -163,7 +163,7 @@ function HomePage() {
             <SectionTitle
               eyebrow="About Ramotitanico"
               title="A global institution rooted in Portuguese academic tradition."
-              description="From our headquarters in Lisbon, we coordinate a worldwide network of scholars, practitioners, and institutions committed to advancing knowledge in service of society. Our work bridges disciplines, geographies, and generations."
+              description="From our headquarters in Braga, we coordinate a worldwide network of scholars, practitioners, and institutions committed to advancing knowledge in service of society. Our work bridges disciplines, geographies, and generations."
             />
             <Link
               to="/about"
@@ -242,7 +242,7 @@ function HomePage() {
               International Conference on Education, Research & Sustainable Innovation
             </h2>
             <p className="mt-4 max-w-xl text-primary-foreground/80">
-              Lisbon hosts the 2026 edition of our flagship interdisciplinary conference. Scholars,
+              Braga hosts the 2026 edition of our flagship interdisciplinary conference. Scholars,
               policymakers, and practitioners convene for two days of plenaries, panels, and
               published proceedings.
             </p>
