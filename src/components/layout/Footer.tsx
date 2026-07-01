@@ -61,7 +61,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-primary-foreground/75">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span>Head Office — Lisbon, Portugal</span>
+                <span>Head Office — Braga, Portugal</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
@@ -116,7 +116,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/60 sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} Ramotitanico. All rights reserved.</p>
-          <p>Lisbon · Portugal · Worldwide</p>
+          <p>Braga · Portugal · Worldwide</p>
         </div>
       </div>
     </footer>

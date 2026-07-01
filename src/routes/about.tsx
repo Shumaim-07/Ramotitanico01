@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Ramotitanico" },
-      { name: "description", content: "Our mission, vision, and the values that drive Ramotitanico's global academic work from Lisbon." },
+      { name: "description", content: "Our mission, vision, and the values that drive Ramotitanico's global academic work from Braga." },
       { property: "og:title", content: "About — Ramotitanico" },
       { property: "og:description", content: "Mission, vision, and core values of Ramotitanico — a Portugal-based academic organization." },
       { property: "og:url", content: "/about" },
@@ -32,7 +32,7 @@ function AboutPage() {
     <>
       <PageHero
         eyebrow="About Ramotitanico"
-        title="Education, research, and global collaboration — built from Lisbon."
+        title="Education, research, and global collaboration — built from Braga."
         description="We are a multidisciplinary organization connecting institutions, scholars, and policy communities through rigorous programmes that travel across borders."
       />
 
@@ -41,7 +41,7 @@ function AboutPage() {
           <div className="space-y-5 text-foreground/85">
             <SectionTitle eyebrow="Who We Are" title="A Portugal-based global organization." />
             <p className="text-lg leading-relaxed">
-              Ramotitanico operates from Lisbon as a multidisciplinary institution committed to
+              Ramotitanico operates from Braga as a multidisciplinary institution committed to
               the advancement of education, research, innovation, sustainability, and global
               collaboration. Our network spans universities, research centres, NGOs, and
               publishers across Europe, Asia, Africa, and the Americas.
@@ -121,7 +121,7 @@ function AboutPage() {
             Global Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            From a Lisbon office to a worldwide academic community.
+            From a Braga office to a worldwide academic community.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>

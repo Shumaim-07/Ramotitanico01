@@ -25,7 +25,7 @@ interface Item {
 }
 
 const items: Item[] = [
-  { category: "Conferences", caption: "Plenary session, Lisbon 2025", src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80" },
+  { category: "Conferences", caption: "Plenary session, Braga 2025", src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80" },
   { category: "Conferences", caption: "Keynote address", src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&q=80" },
   { category: "Workshops", caption: "Research methods workshop", src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" },
   { category: "Workshops", caption: "Doctoral training session", src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80" },

@@ -26,8 +26,8 @@ export const Route = createFileRoute("/events")({
           eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
           location: {
             "@type": "Place",
-            name: "Lisbon, Portugal",
-            address: { "@type": "PostalAddress", addressLocality: "Lisbon", addressCountry: "PT" },
+            name: "Braga, Portugal",
+            address: { "@type": "PostalAddress", addressLocality: "Braga", addressCountry: "PT" },
           },
           organizer: { "@type": "Organization", name: "Ramotitanico" },
         }),
@@ -41,7 +41,7 @@ const timeline = [
   { date: "15 February 2026", title: "Abstract Submission Opens", desc: "Authors submit 300-word abstracts via the conference portal.", icon: Send },
   { date: "30 March 2026", title: "Acceptance Notifications", desc: "Programme committee returns peer-reviewed decisions with feedback.", icon: FileCheck2 },
   { date: "15 May 2026", title: "Full Paper Submission", desc: "Accepted contributors submit camera-ready full papers for proceedings.", icon: FileText },
-  { date: "27–28 June 2026", title: "Conference in Lisbon", desc: "Two days of plenaries, parallel panels, and networking sessions.", icon: CalendarCheck },
+  { date: "27–28 June 2026", title: "Conference in Braga", desc: "Two days of plenaries, parallel panels, and networking sessions.", icon: CalendarCheck },
 ];
 
 const benefits = [
@@ -57,7 +57,7 @@ function EventsPage() {
       <PageHero
         eyebrow="Events & Conferences"
         title="A worldwide programme of scholarly gatherings."
-        description="From flagship international conferences in Lisbon to regional symposia and executive seminars across our partner network."
+        description="From flagship international conferences in Braga to regional symposia and executive seminars across our partner network."
       />
 
       {/* Featured Conference */}
@@ -66,7 +66,7 @@ function EventsPage() {
           <div className="grid gap-0 lg:grid-cols-[1.3fr_1fr]">
             <div className="p-10 sm:p-14">
               <span className="inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-                Flagship · 27–28 June 2026 · Lisbon
+                Flagship · 27–28 June 2026 · Braga
               </span>
               <h2 className="mt-5 font-display text-3xl font-semibold leading-tight sm:text-4xl">
                 International Conference on Education, Research & Sustainable Innovation

@@ -10,9 +10,9 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Ramotitanico" },
-      { name: "description", content: "Reach Ramotitanico's Lisbon office, partnerships team, and consultant network." },
+      { name: "description", content: "Reach Ramotitanico's Braga office, partnerships team, and consultant network." },
       { property: "og:title", content: "Contact — Ramotitanico" },
-      { property: "og:description", content: "Email, phone, and contact form for Ramotitanico in Lisbon, Portugal." },
+      { property: "og:description", content: "Email, phone, and contact form for Ramotitanico in Braga, Portugal." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -52,15 +52,15 @@ function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="We would be glad to hear from you."
-        description="For partnerships, conference enquiries, consultancy, or media — reach our Lisbon office through the channels below."
+        description="For partnerships, conference enquiries, consultancy, or media — reach our Braga office through the channels below."
       />
 
       <section className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <div>
-            <SectionTitle eyebrow="Head Office" title="Lisbon, Portugal" />
+            <SectionTitle eyebrow="Head Office" title="Braga, Portugal" />
             <ul className="mt-8 space-y-5 text-sm">
-              <Item icon={MapPin} label="Address" value="Head Office — Lisbon, Portugal" />
+              <Item icon={MapPin} label="Address" value="Head Office — Braga, Portugal" />
               <Item icon={Mail} label="Email" value="info@ramotitanico.com" href="mailto:info@ramotitanico.com" />
               <Item icon={Phone} label="Phone" value="+351 000 000 000" href="tel:+351000000000" />
               <Item icon={MessageCircle} label="WhatsApp" value="+351 000 000 000" />

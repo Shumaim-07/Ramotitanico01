@@ -26,7 +26,7 @@ interface Person {
 const founder: Person = {
   initials: "RT",
   name: "Founder & Director",
-  role: "Ramotitanico, Lisbon",
+  role: "Ramotitanico, Braga",
   bio: "Leads the organization's strategic direction, international partnerships, and editorial programme. Two decades of experience across European and Asian higher education institutions.",
 };
 

@@ -22,7 +22,7 @@ const items = [
     icon: Library,
     type: "Conference Proceedings",
     title: "Education, Research & Sustainable Innovation — Proceedings 2025",
-    desc: "Selected peer-reviewed papers from the 2025 Lisbon conference, indexed in major academic databases.",
+    desc: "Selected peer-reviewed papers from the 2025 Braga conference, indexed in major academic databases.",
     meta: "PDF · 412 pages · 2025",
   },
   {
