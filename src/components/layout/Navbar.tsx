@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, GraduationCap, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-
+import logo from "@/assets/Ramotitanico.jpeg";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
@@ -42,15 +42,14 @@ export function Navbar() {
     >
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Link to="/" className="flex min-w-0 items-center gap-2.5 shrink-0">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-primary text-primary-foreground">
-            <GraduationCap className="h-5 w-5" />
-          </span>
-          <span className="flex min-w-0 flex-col leading-tight">
-            <span className="truncate font-display text-lg font-semibold text-primary">
-              Ramotitanico
-            </span>
-          </span>
-        </Link>
+  <span className="flex min-w-0 flex-col leading-tight">
+    <img 
+      src={logo} 
+      alt="Ramotitanico" 
+      className="h-16 w-auto object-contain" 
+    />
+  </span>
+</Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
           {links.map((l) => (

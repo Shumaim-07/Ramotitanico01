@@ -26,7 +26,10 @@ export const Route = createFileRoute("/")({
         content:
           "Portugal-based multidisciplinary organization advancing education, research, innovation, and global academic collaboration.",
       },
-      { property: "og:title", content: "Ramotitanico — Education, Research & Global Collaboration" },
+      {
+        property: "og:title",
+        content: "Ramotitanico — Education, Research & Global Collaboration",
+      },
       {
         property: "og:description",
         content:
@@ -40,12 +43,36 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: GraduationCap, title: "Educational Consultancy", desc: "Strategic advisory for universities, ministries, and institutions modernising curricula and academic governance." },
-  { icon: Calendar, title: "Conference & Event Management", desc: "End-to-end orchestration of international academic conferences, symposia, and policy roundtables." },
-  { icon: BookOpen, title: "Research & Publication Support", desc: "Methodological guidance, editorial review, indexing and dissemination across reputable academic channels." },
-  { icon: Compass, title: "Professional Training", desc: "Certified programmes for educators, researchers, and administrators across emerging and established disciplines." },
-  { icon: Globe, title: "Academic Exchange", desc: "Bilateral cultural and academic mobility frameworks connecting institutions across continents." },
-  { icon: Handshake, title: "International Collaboration", desc: "Partnership facilitation between universities, NGOs, research centres, and policy bodies worldwide." },
+  {
+    icon: GraduationCap,
+    title: "Educational Consultancy",
+    desc: "Strategic advisory for universities, ministries, and institutions modernising curricula and academic governance.",
+  },
+  {
+    icon: Calendar,
+    title: "Conference & Event Management",
+    desc: "End-to-end orchestration of international academic conferences, symposia, and policy roundtables.",
+  },
+  {
+    icon: BookOpen,
+    title: "Research & Publication Support",
+    desc: "Methodological guidance, editorial review, indexing and dissemination across reputable academic channels.",
+  },
+  {
+    icon: Compass,
+    title: "Professional Training",
+    desc: "Certified programmes for educators, researchers, and administrators across emerging and established disciplines.",
+  },
+  {
+    icon: Globe,
+    title: "Academic Exchange",
+    desc: "Bilateral cultural and academic mobility frameworks connecting institutions across continents.",
+  },
+  {
+    icon: Handshake,
+    title: "International Collaboration",
+    desc: "Partnership facilitation between universities, NGOs, research centres, and policy bodies worldwide.",
+  },
 ];
 
 const stats = [
@@ -96,7 +123,7 @@ function HomePage() {
               "linear-gradient(135deg, oklch(0.22 0.07 260 / 0.92), oklch(0.28 0.08 260 / 0.78))",
           }}
         />
-        <div className="container-page relative py-24 sm:py-32 lg:py-40">
+        <div className="container-page relative py-18 sm:py-28 lg:py-25">
           <div className="max-w-3xl animate-fade-up">
             <span className="inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               Lisbon · Portugal · Worldwide
@@ -105,9 +132,11 @@ function HomePage() {
               Empowering Education, Innovation & Global Collaboration
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-              Ramotitanico is a Portugal-based multidisciplinary organization advancing
-              education, research, sustainability, and international academic cooperation —
-              building bridges between scholars, institutions, and societies.
+              Ramotitanico is a Portugal-based multidisciplinary organization committed to advancing
+              education, research, sustainable development, and international cooperation. Through
+              educational initiatives, academic collaborations, and future-oriented ventures in
+              agriculture, transport, and construction, we strive to create meaningful social and
+              economic impact across communities and industries.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -196,11 +225,7 @@ function HomePage() {
 
       {/* Stats */}
       <section className="container-page py-20">
-        <SectionTitle
-          align="center"
-          eyebrow="Our Reach"
-          title="A measurable global footprint."
-        />
+        <SectionTitle align="center" eyebrow="Our Reach" title="A measurable global footprint." />
         <div className="mt-12">
           <StatCounter stats={stats} />
         </div>
@@ -243,7 +268,10 @@ function HomePage() {
               { icon: Microscope, label: "200+ Papers" },
               { icon: BookOpen, label: "Indexed Proceedings" },
             ].map((b) => (
-              <div key={b.label} className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-5">
+              <div
+                key={b.label}
+                className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-5"
+              >
                 <b.icon className="h-6 w-6 text-accent" />
                 <div className="mt-3 font-semibold">{b.label}</div>
               </div>
