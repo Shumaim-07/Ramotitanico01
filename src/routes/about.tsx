@@ -8,9 +8,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Ramotitanico" },
-      { name: "description", content: "Our mission, vision, and the values that drive Ramotitanico's global academic work from Braga." },
+      { name: "description", content: "Our mission, vision, and the values that drive Ramotitanico's work across education, construction, transport, and agriculture — from Braga to the world." },
       { property: "og:title", content: "About — Ramotitanico" },
-      { property: "og:description", content: "Mission, vision, and core values of Ramotitanico — a Portugal-based academic organization." },
+      { property: "og:description", content: "Mission, vision, and core values of Ramotitanico — a Portugal-based organisation operating across four sectors." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -32,26 +32,26 @@ function AboutPage() {
     <>
       <PageHero
         eyebrow="About Ramotitanico"
-        title="Education, research, and global collaboration — built from Braga."
-        description="We are a multidisciplinary organization connecting institutions, scholars, and policy communities through rigorous programmes that travel across borders."
+        title="Education, construction, transport, and agriculture — built from Braga."
+        description="We are a multidisciplinary organisation operating across four sectors, connecting scholars, building infrastructure, enabling mobility, and cultivating sustainable agriculture from our base in Portugal."
       />
 
       <section className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div className="space-y-5 text-foreground/85">
-            <SectionTitle eyebrow="Who We Are" title="A Portugal-based global organization." />
+            <SectionTitle eyebrow="Who We Are" title="A Portugal-based multidisciplinary organisation." />
             <p className="text-lg leading-relaxed">
-              Ramotitanico operates from Braga as a multidisciplinary institution committed to
-              the advancement of education, research, innovation, sustainability, and global
-              collaboration. Our network spans universities, research centres, NGOs, and
-              publishers across Europe, Asia, Africa, and the Americas.
+              Ramotitanico operates from Braga across four interconnected sectors: education,
+              construction, transport, and agriculture. We advance research and learning through
+              global academic partnerships, deliver quality construction projects, run a
+              peer-to-peer car rental marketplace across Portugal, and support sustainable
+              agricultural development through expert consultancy.
             </p>
             <p className="leading-relaxed">
-              We were established to address a structural gap in international academic life:
-              the need for credible, professionally managed platforms that connect rigorous
-              scholarship with the institutions, policymakers, and communities that need it.
-              Today, we deliver conferences, publications, consultancy, training, and exchange
-              programmes that reflect that founding ambition.
+              We were established to address structural gaps where expertise and opportunity fail
+              to meet. Today, that ambition extends from academic conferences and publications
+              through to built infrastructure, accessible mobility, and resilient food systems —
+              all anchored in the same commitment to quality, sustainability, and long-term impact.
             </p>
           </div>
           <img
@@ -85,12 +85,12 @@ function AboutPage() {
               <span className="rounded-full bg-accent-soft px-3 py-1 text-accent-foreground">Our Mission</span>
             </span>
             <h3 className="mt-4 font-display text-2xl font-semibold text-primary">
-              Build platforms where rigorous knowledge meets practice.
+              Build systems — academic, physical, and social — that create lasting value.
             </h3>
             <p className="mt-3 leading-relaxed text-foreground/80">
-              We design and operate conferences, publications, training programmes, and
-              partnerships that elevate scholarship and turn it into institutional, policy, and
-              cultural impact.
+              We design and operate conferences, publications, training programmes, construction
+              projects, mobility platforms, and agricultural initiatives that turn expertise into
+              institutional, community, and economic impact.
             </p>
           </div>
         </div>
@@ -121,21 +121,21 @@ function AboutPage() {
             Global Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            From a Braga office to a worldwide academic community.
+            From a Braga office to four sectors, forty countries.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>
               Across more than forty countries, Ramotitanico has supported universities in
-              redesigning curricula, organised international conferences with hundreds of
-              delegates, edited proceedings indexed by leading academic databases, and
-              facilitated mobility for early-career researchers historically excluded from
-              international circuits.
+              redesigning curricula, organised international conferences, edited indexed
+              proceedings, and facilitated mobility for early-career researchers. In Portugal,
+              we have delivered construction projects, launched a peer-to-peer car rental
+              marketplace, and supported farms through agritech and sustainable practices advisory.
             </p>
             <p>
               Our impact is measured not in headlines but in the quiet, compounding work of
-              improved courses, sharper research, stronger institutions, and lasting
-              partnerships. We are proud to be a small but determined contributor to the
-              international academic commons.
+              improved courses, sharper research, stronger institutions, buildings that endure,
+              cars that earn, and farms that thrive. We are proud to be a determined contributor
+              across each of the four sectors we serve.
             </p>
           </div>
         </div>

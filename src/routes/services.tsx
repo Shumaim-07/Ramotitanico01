@@ -1,14 +1,26 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { BookOpen, Calendar, Compass, GraduationCap, Globe, Handshake } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowRight,
+  BookOpen,
+  Building2,
+  Calendar,
+  Car,
+  Compass,
+  GraduationCap,
+  Globe,
+  Handshake,
+  Leaf,
+} from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
+import { SectionTitle } from "@/components/ui/section-title";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Ramotitanico" },
-      { name: "description", content: "Educational consultancy, conferences, research support, training, exchange, and international collaboration services." },
+      { name: "description", content: "Ramotitanico's full range of services across education, construction, car rental, and agriculture — four sectors, one organisation." },
       { property: "og:title", content: "Services — Ramotitanico" },
-      { property: "og:description", content: "Six interconnected service areas serving universities, researchers, and institutions worldwide." },
+      { property: "og:description", content: "From academic consultancy and conferences to construction projects, car rental, and agricultural advisory — Ramotitanico's four-sector service portfolio." },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -16,7 +28,34 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
 });
 
-const services = [
+const sectors = [
+  {
+    icon: GraduationCap,
+    title: "Education",
+    desc: "Academic consultancy, conference management, research support, professional training, and international collaboration.",
+    href: "/education",
+  },
+  {
+    icon: Building2,
+    title: "Construction",
+    desc: "Residential, commercial, and infrastructure projects across Portugal — planned, managed, and delivered to specification.",
+    href: "/construction",
+  },
+  {
+    icon: Car,
+    title: "Transport",
+    desc: "Portugal's peer-to-peer car rental marketplace. Rent directly from our fleet or list your own car and earn.",
+    href: "/transport",
+  },
+  {
+    icon: Leaf,
+    title: "Agriculture",
+    desc: "Farm strategy consultancy, agritech solutions, sustainable practices advisory, and agricultural research support.",
+    href: "/agriculture",
+  },
+];
+
+const educationServices = [
   {
     icon: GraduationCap,
     title: "Educational Consultancy",
@@ -54,28 +93,65 @@ function ServicesPage() {
     <>
       <PageHero
         eyebrow="Our Services"
-        title="Six practice areas. One institutional standard."
-        description="Each service area is staffed by senior practitioners and supported by our global advisory network."
+        title="Four sectors. One institutional standard."
+        description="Ramotitanico operates across education, construction, transport, and agriculture — each area staffed by practitioners who bring the same rigour and commitment to excellence."
       />
 
+      {/* Sector Overview */}
       <section className="container-page py-20">
-        <div className="grid gap-6 md:grid-cols-2">
-          {services.map((s) => (
-            <article
+        <SectionTitle
+          align="center"
+          eyebrow="Business Areas"
+          title="Choose your sector."
+          description="Each sector has its own dedicated team and service page. Explore the area most relevant to you."
+        />
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {sectors.map((s) => (
+            <Link
               key={s.title}
-              className="group rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
+              to={s.href}
+              className="group flex flex-col rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
             >
-              <div className="flex items-start gap-5">
-                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                  <s.icon className="h-7 w-7" />
-                </span>
-                <div className="min-w-0">
-                  <h3 className="font-display text-xl font-semibold text-primary">{s.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                </div>
-              </div>
-            </article>
+              <span className="grid h-12 w-12 place-items-center rounded-lg bg-primary text-primary-foreground transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                <s.icon className="h-6 w-6" />
+              </span>
+              <h3 className="mt-5 font-display text-xl font-semibold text-primary">{s.title}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+              <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary transition-all group-hover:gap-2">
+                Explore <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Education Services Detail */}
+      <section className="bg-surface py-20">
+        <div className="container-page">
+          <SectionTitle
+            align="center"
+            eyebrow="Education"
+            title="Academic & education services in detail."
+            description="Six interconnected practice areas, delivered with academic rigour and operational discipline."
+          />
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {educationServices.map((s) => (
+              <article
+                key={s.title}
+                className="group rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
+              >
+                <div className="flex items-start gap-5">
+                  <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                    <s.icon className="h-7 w-7" />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-xl font-semibold text-primary">{s.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </>

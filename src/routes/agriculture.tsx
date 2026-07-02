@@ -6,10 +6,10 @@ import { SectionTitle } from "@/components/ui/section-title";
 export const Route = createFileRoute("/agriculture")({
   head: () => ({
     meta: [
-      { title: "Agriculture Services — Ramotitanico" },
-      { name: "description", content: "Agriculture consulting services including agribusiness advisory, sustainable farming, crop research, policy consulting, market access facilitation, and smart agriculture." },
-      { property: "og:title", content: "Agriculture Services — Ramotitanico" },
-      { property: "og:description", content: "Ramotitanico's agriculture sector services: agribusiness consulting, sustainable farming, crop management, policy advisory, market access, and agricultural technology." },
+      { title: "Agriculture & Agritech — Ramotitanico" },
+      { name: "description", content: "Agricultural consultancy, agritech implementation, sustainable farming practices, and research support — helping Portugal's agricultural sector grow and adapt." },
+      { property: "og:title", content: "Agriculture & Agritech — Ramotitanico" },
+      { property: "og:description", content: "Ramotitanico supports producers, cooperatives, and agribusinesses through expert consultancy, agritech solutions, sustainable farming practices, and market access facilitation." },
       { property: "og:url", content: "/agriculture" },
     ],
     links: [{ rel: "canonical", href: "/agriculture" }],
@@ -54,9 +54,9 @@ function AgriculturePage() {
   return (
     <>
       <PageHero
-        eyebrow="Agriculture Services"
+        eyebrow="Agriculture & Agritech"
         title="Cultivating sustainable food systems for a changing world."
-        description="Our agriculture specialists work with producers, governments, and investors to build resilient, productive, and sustainable agricultural systems that serve communities now and in the future."
+        description="We work with producers, cooperatives, and agribusinesses to strengthen Portugal's agricultural sector through expert consultancy, technology-driven solutions, and sustainable farming practices that boost productivity and protect the land."
       />
 
       <section className="container-page py-20">

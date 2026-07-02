@@ -78,20 +78,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ramotitanico — Education, Research & Global Collaboration" },
+      { title: "Ramotitanico — Education, Construction, Transport & Agriculture" },
       {
         name: "description",
         content:
-          "Ramotitanico is a Portugal-based multidisciplinary organization advancing education, research, innovation, sustainability, and global collaboration.",
+          "Ramotitanico is a Portugal-based multidisciplinary organisation operating across education, construction, transport, and agriculture — creating sustainable impact from Braga to the world.",
       },
       { name: "author", content: "Ramotitanico" },
       { property: "og:site_name", content: "Ramotitanico" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Ramotitanico — Education, Research & Global Collaboration" },
+      { property: "og:title", content: "Ramotitanico — Education, Construction, Transport & Agriculture" },
       {
         property: "og:description",
         content:
-          "A Portugal-based multidisciplinary organization advancing education, research, innovation, sustainability, and global collaboration.",
+          "A Portugal-based multidisciplinary organisation operating across education, construction, transport, and agriculture.",
       },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -110,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressCountry: "PT",
           },
           description:
-            "Portugal-based multidisciplinary organization focused on education, research, innovation, sustainability, and global collaboration.",
+            "Portugal-based multidisciplinary organisation operating across education, construction, car rental & transport, and agriculture — driving sustainable development from Braga.",
         }),
       },
     ],

@@ -6,10 +6,10 @@ import { SectionTitle } from "@/components/ui/section-title";
 export const Route = createFileRoute("/construction")({
   head: () => ({
     meta: [
-      { title: "Construction Services — Ramotitanico" },
-      { name: "description", content: "Construction and infrastructure consulting services including project planning, sustainable building advisory, compliance management, and development oversight." },
-      { property: "og:title", content: "Construction Services — Ramotitanico" },
-      { property: "og:description", content: "Ramotitanico's construction sector services: project planning, sustainable building, infrastructure development, compliance, oversight, and green certification." },
+      { title: "Construction & Development — Ramotitanico" },
+      { name: "description", content: "Residential, commercial, and infrastructure construction across Portugal — from project planning and sustainable building to full delivery and green certification." },
+      { property: "og:title", content: "Construction & Development — Ramotitanico" },
+      { property: "og:description", content: "Ramotitanico plans, manages, and delivers residential, commercial, and infrastructure projects across Portugal with a commitment to sustainability and modern building standards." },
       { property: "og:url", content: "/construction" },
     ],
     links: [{ rel: "canonical", href: "/construction" }],
@@ -20,18 +20,18 @@ export const Route = createFileRoute("/construction")({
 const services = [
   {
     icon: Building2,
-    title: "Project Planning & Feasibility",
-    desc: "Rigorous pre-construction analysis including site assessment, stakeholder mapping, budget modelling, and risk evaluation. We help clients make informed investment decisions before breaking ground.",
+    title: "Project Planning & Development",
+    desc: "We take projects from concept to groundbreaking. Site assessment, planning permissions, budget modelling, stakeholder coordination — comprehensive pre-construction work that de-risks development before any building begins.",
   },
   {
     icon: Leaf,
-    title: "Sustainable Construction Advisory",
-    desc: "Strategic guidance on low-carbon construction methods, circular material sourcing, and net-zero building design. We translate sustainability commitments into practical specification and procurement decisions.",
+    title: "Sustainable Building",
+    desc: "Low-carbon construction methods, circular material sourcing, and energy-efficient design are embedded in every project we deliver — not treated as optional extras. We build sustainably because it is the right way to build.",
   },
   {
     icon: Layers,
-    title: "Infrastructure Development Consulting",
-    desc: "Advisory services across transport, utilities, and public works infrastructure. Our specialists support governments and developers from concept design through to commissioning and handover.",
+    title: "Infrastructure Development",
+    desc: "We deliver transport, utilities, and public works infrastructure from concept through to commissioning. Our teams manage complex multi-stakeholder schemes on behalf of governments and developers across Portugal.",
   },
   {
     icon: Shield,
@@ -54,16 +54,16 @@ function ConstructionPage() {
   return (
     <>
       <PageHero
-        eyebrow="Construction Services"
-        title="Building resilient infrastructure with global expertise."
-        description="Our construction specialists advise on complex projects from initial feasibility to final handover — integrating sustainability, compliance, and performance at every stage."
+        eyebrow="Construction & Development"
+        title="We plan, manage, and build."
+        description="From residential homes to commercial premises and public infrastructure, Ramotitanico delivers construction projects across Portugal with sustainability, compliance, and quality built in at every stage."
       />
 
       <section className="container-page py-20">
         <SectionTitle
-          eyebrow="What We Offer"
-          title="Six construction services. Built on solid expertise."
-          description="Each service draws on a team of engineers, sustainability specialists, and project managers with international experience across public and private sector schemes."
+          eyebrow="What We Deliver"
+          title="Six construction capabilities. One integrated team."
+          description="Our engineers, sustainability specialists, and project managers work together across every project phase — from feasibility through to handover — on public and private sector schemes across Portugal."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {services.map((s) => (
@@ -91,17 +91,17 @@ function ConstructionPage() {
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Infrastructure that serves communities for generations.
+            Buildings and infrastructure that serve communities for generations.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>
-              Ramotitanico has advised on construction and infrastructure projects across Europe,
-              Africa, and Asia — from public school renovations and hospital builds to large-scale
-              transport infrastructure. Our approach integrates technical rigour with community
-              sensitivity and long-term sustainability planning.
+              Ramotitanico has planned, managed, and delivered construction and infrastructure
+              projects across Portugal — from residential developments and commercial premises to
+              public works and infrastructure upgrades. Our approach integrates technical rigour
+              with community sensitivity and long-term sustainability planning.
             </p>
             <p>
-              We believe that built environments shape social outcomes. Every project we advise on
+              We believe that built environments shape social outcomes. Every project we deliver
               carries a responsibility to the people who will use, maintain, and inherit it — a
               responsibility we take seriously at every stage of the project lifecycle.
             </p>

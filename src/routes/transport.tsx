@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Truck, Map, Navigation, Zap, Globe2, BarChart3 } from "lucide-react";
+import { Car, Key, CalendarDays, MapPin, ShieldCheck, Smartphone } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
 
 export const Route = createFileRoute("/transport")({
   head: () => ({
     meta: [
-      { title: "Transport Services — Ramotitanico" },
-      { name: "description", content: "Transport and logistics consulting services including infrastructure planning, fleet management, multimodal integration, and smart mobility solutions." },
-      { property: "og:title", content: "Transport Services — Ramotitanico" },
-      { property: "og:description", content: "Ramotitanico's transport sector services: logistics advisory, infrastructure planning, fleet management, multimodal integration, regulatory consulting, and smart mobility." },
+      { title: "Car Rental & Mobility — Ramotitanico" },
+      { name: "description", content: "Rent a car directly from Ramotitanico or list your own vehicle and earn. Portugal's peer-to-peer car rental marketplace based in Braga." },
+      { property: "og:title", content: "Car Rental & Mobility — Ramotitanico" },
+      { property: "og:description", content: "Rent a vehicle from Ramotitanico's fleet, or register your car on our platform and rent it to others. Flexible short and long-term plans across Portugal." },
       { property: "og:url", content: "/transport" },
     ],
     links: [{ rel: "canonical", href: "/transport" }],
@@ -19,34 +19,34 @@ export const Route = createFileRoute("/transport")({
 
 const services = [
   {
-    icon: Truck,
-    title: "Logistics & Supply Chain Advisory",
-    desc: "End-to-end supply chain analysis and optimisation for public bodies and private operators. We identify bottlenecks, model alternative configurations, and develop implementation roadmaps that reduce cost and improve resilience.",
+    icon: Car,
+    title: "Direct Vehicle Rental",
+    desc: "Rent from Ramotitanico's own managed fleet. Choose from economy hatchbacks to spacious SUVs, with competitive daily and weekly rates, instant online booking, and no hidden fees.",
   },
   {
-    icon: Map,
-    title: "Transport Infrastructure Planning",
-    desc: "Strategic planning for roads, rail, ports, and urban transit networks. Our planners integrate demand modelling, environmental assessment, and stakeholder engagement into coherent, fundable infrastructure strategies.",
+    icon: Key,
+    title: "List Your Car & Earn",
+    desc: "Own a vehicle you're not always using? Register it on our platform and rent it to verified customers. We handle payments, insurance coordination, and customer support — you just collect earnings from your car.",
   },
   {
-    icon: Navigation,
-    title: "Fleet Management Solutions",
-    desc: "Advisory on fleet procurement, maintenance strategy, electrification planning, and telematics integration. We help operators reduce operating costs while meeting regulatory and sustainability targets.",
+    icon: CalendarDays,
+    title: "Flexible Rental Plans",
+    desc: "Whether you need a car for a few hours, a weekend, or several months, we have a plan to match. Hourly, daily, weekly, and long-term monthly rates with straightforward pricing and digital contracts.",
   },
   {
-    icon: Globe2,
-    title: "Multimodal Transport Integration",
-    desc: "Frameworks for seamless passenger and freight movement across modes. We design interchange infrastructure, ticketing integration strategies, and governance models for multimodal authorities.",
+    icon: MapPin,
+    title: "Portugal-Wide Coverage",
+    desc: "Pick up in Braga, Porto, Lisbon, and other key cities. Our growing network of pickup points and owner-registered vehicles means you'll find a car wherever you need one across Portugal.",
   },
   {
-    icon: BarChart3,
-    title: "Regulatory & Policy Consulting",
-    desc: "Policy review, regulatory impact assessment, and reform design for transport authorities. Our consultants support legislative drafting, licensing reform, and alignment with international transport conventions.",
+    icon: ShieldCheck,
+    title: "Fully Insured Rentals",
+    desc: "Every vehicle in our fleet carries comprehensive insurance. Owner-listed cars are verified and covered under our P2P rental protection scheme, so both renters and owners have peace of mind.",
   },
   {
-    icon: Zap,
-    title: "Smart Mobility Solutions",
-    desc: "Advisory on MaaS platforms, autonomous vehicle frameworks, intelligent transport systems, and data-driven mobility governance. We help public and private clients navigate the transition to connected, digital transport.",
+    icon: Smartphone,
+    title: "Easy Online Booking",
+    desc: "Search availability, compare vehicles, and book in minutes through our platform. Real-time availability, instant confirmation, digital rental agreements, and support whenever you need it.",
   },
 ];
 
@@ -54,16 +54,16 @@ function TransportPage() {
   return (
     <>
       <PageHero
-        eyebrow="Transport Services"
-        title="Connecting people and goods with smarter mobility."
-        description="Our transport specialists advise governments, operators, and investors on infrastructure, logistics, and the technologies reshaping how people and freight move across the world."
+        eyebrow="Car Rental & Mobility"
+        title="Rent a car. Or rent yours out."
+        description="Ramotitanico operates a peer-to-peer car rental marketplace across Portugal. Rent directly from our managed fleet, or register your own vehicle and earn while it sits idle."
       />
 
       <section className="container-page py-20">
         <SectionTitle
           eyebrow="What We Offer"
-          title="Six transport services. One integrated perspective."
-          description="Each service is delivered by professionals with hands-on experience in transport planning, logistics operations, and mobility policy across multiple geographies and transport modes."
+          title="Everything you need to rent or earn."
+          description="Whether you're looking for a vehicle across Portugal or want to put your parked car to work, our platform connects both sides simply and safely."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {services.map((s) => (
@@ -85,26 +85,84 @@ function TransportPage() {
         </div>
       </section>
 
+      <section className="bg-surface py-20">
+        <div className="container-page grid gap-16 lg:grid-cols-2">
+          <div>
+            <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              For Car Owners
+            </span>
+            <h2 className="mt-5 font-display text-3xl font-semibold text-primary">
+              Your car earns while you don't drive it.
+            </h2>
+            <p className="mt-4 leading-relaxed text-foreground/80">
+              Registering your vehicle takes minutes. We verify the car, manage bookings, coordinate
+              payments, and handle customer enquiries on your behalf. You set your availability and
+              pricing — we do the rest.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "Quick vehicle registration",
+                "You control availability and rates",
+                "Payments deposited to your account",
+                "P2P insurance protection included",
+              ].map((f) => (
+                <li key={f} className="flex items-center gap-2.5 text-sm text-foreground/80">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              For Renters
+            </span>
+            <h2 className="mt-5 font-display text-3xl font-semibold text-primary">
+              The right car, wherever you are in Portugal.
+            </h2>
+            <p className="mt-4 leading-relaxed text-foreground/80">
+              Browse our fleet and owner-listed vehicles by location, date, and category. Compare
+              rates, book instantly, and collect your car with a digital contract. No queues, no
+              paperwork surprises.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {[
+                "Economy, saloon, SUV, and minivan options",
+                "Hourly to monthly rental plans",
+                "Pickup points across Portugal",
+                "All rentals fully insured",
+              ].map((f) => (
+                <li key={f} className="flex items-center gap-2.5 text-sm text-foreground/80">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container-page max-w-4xl">
           <span className="inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Transport systems that power economic growth.
+            Mobility that works for both sides of the market.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>
-              Ramotitanico has contributed to transport reforms, infrastructure masterplans, and
-              logistics strategies across Europe, Africa, and South-East Asia. Our work spans
-              urban transit to international freight corridors, always anchored in the practical
-              realities of implementation and the needs of end users.
+              Ramotitanico's car rental platform was built to solve two problems at once: the cost
+              and inflexibility of traditional car hire, and the under-utilisation of privately owned
+              vehicles across Portugal. By connecting renters with both our managed fleet and
+              registered owner vehicles, we create value on both sides of the market.
             </p>
             <p>
-              We recognise that transport is not just an economic enabler — it is a social
-              equaliser. Accessible, affordable, and efficient mobility determines who participates
-              in economic life and who is left behind. That conviction shapes every engagement we
-              take on.
+              For renters, that means more choice, better prices, and a digital-first experience
+              without the friction of traditional rental counters. For car owners, it means a simple,
+              hands-off way to generate income from an asset that would otherwise sit parked. For
+              Portugal, it means fewer idle vehicles, more efficient use of existing capacity, and a
+              transport option built for how people actually live today.
             </p>
           </div>
         </div>

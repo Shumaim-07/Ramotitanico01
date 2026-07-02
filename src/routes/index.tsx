@@ -2,11 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BookOpen,
+  Building2,
   Calendar,
+  Car,
   Compass,
   GraduationCap,
   Globe,
   Handshake,
+  Leaf,
   Microscope,
   Quote,
   Star,
@@ -20,20 +23,20 @@ import { StatCounter } from "@/components/ui/stat-counter";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ramotitanico — Education, Research & Global Collaboration" },
+      { title: "Ramotitanico — Education, Construction, Transport & Agriculture" },
       {
         name: "description",
         content:
-          "Portugal-based multidisciplinary organization advancing education, research, innovation, and global academic collaboration.",
+          "Portugal-based multidisciplinary organisation operating across education, construction, transport, and agriculture — driving sustainable development from Braga to the world.",
       },
       {
         property: "og:title",
-        content: "Ramotitanico — Education, Research & Global Collaboration",
+        content: "Ramotitanico — Education, Construction, Transport & Agriculture",
       },
       {
         property: "og:description",
         content:
-          "Portugal-based multidisciplinary organization advancing education, research, innovation, and global academic collaboration.",
+          "Portugal-based multidisciplinary organisation operating across education, construction, transport, and agriculture — driving sustainable development from Braga to the world.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -75,11 +78,52 @@ const services = [
   },
 ];
 
+const businessAreas = [
+  {
+    icon: Building2,
+    tag: "Construction",
+    title: "Construction & Development",
+    desc: "Delivering quality residential, commercial, and infrastructure projects across Portugal, built on modern engineering and sustainable building practices.",
+    features: [
+      "Residential & commercial builds",
+      "Infrastructure development",
+      "Project planning & management",
+      "Sustainable construction methods",
+    ],
+  },
+  {
+    icon: Car,
+    tag: "Transport",
+    title: "Car Rental & Mobility",
+    desc: "Rent a vehicle directly from Ramotitanico, or register your own car on our platform and earn by renting it to others — Portugal's peer-to-peer car rental marketplace.",
+    features: [
+      "Direct vehicle rental",
+      "List your car & earn",
+      "Flexible short & long-term plans",
+      "Nationwide Portugal coverage",
+    ],
+  },
+  {
+    icon: Leaf,
+    tag: "Agriculture",
+    title: "Agriculture & Agritech",
+    desc: "Strengthening Portugal's agricultural sector through expert consultancy, technology-enabled solutions, and sustainable farming practices that boost productivity and protect the land.",
+    features: [
+      "Farm strategy consultancy",
+      "Agritech implementation",
+      "Sustainable practices advisory",
+      "Agricultural research support",
+    ],
+  },
+];
+
 const stats = [
   { value: "42+", label: "Countries Engaged" },
-  { value: "120+", label: "Events Hosted" },
-  { value: "300+", label: "Institutional Partners" },
+  { value: "120+", label: "Academic Events Hosted" },
+  { value: "50+", label: "Vehicles Available" },
+  { value: "20+", label: "Construction Projects" },
   { value: "85+", label: "Publications" },
+  { value: "300+", label: "Global Partners" },
 ];
 
 const testimonials = [
@@ -129,14 +173,14 @@ function HomePage() {
               Braga · Portugal · Worldwide
             </span>
             <h1 className="mt-6 font-display text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Empowering Education, Innovation & Global Collaboration
+              Empowering Communities Through Education, Construction, Transport & Agriculture
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-              Ramotitanico is a Portugal-based multidisciplinary organization committed to advancing
-              education, research, sustainable development, and international cooperation. Through
-              educational initiatives, academic collaborations, and future-oriented ventures in
-              agriculture, transport, and construction, we strive to create meaningful social and
-              economic impact across communities and industries.
+              Ramotitanico is a Portugal-based multidisciplinary organisation operating across four
+              interconnected sectors. We advance education and research through global academic
+              partnerships, deliver quality construction projects, provide flexible peer-to-peer car
+              rental services, and support sustainable agricultural development — creating meaningful
+              impact from Braga to the world.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -162,8 +206,8 @@ function HomePage() {
           <div>
             <SectionTitle
               eyebrow="About Ramotitanico"
-              title="A global institution rooted in Portuguese academic tradition."
-              description="From our headquarters in Braga, we coordinate a worldwide network of scholars, practitioners, and institutions committed to advancing knowledge in service of society. Our work bridges disciplines, geographies, and generations."
+              title="Four sectors, one organisation rooted in Braga."
+              description="From our headquarters in Braga, we operate across education, construction, transport, and agriculture — each sector contributing to Portugal's development and our global mission. We connect scholars across continents, build lasting infrastructure, put people in motion, and cultivate sustainable food systems."
             />
             <Link
               to="/about"
@@ -220,6 +264,43 @@ function HomePage() {
               View all services <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Business Areas */}
+      <section className="container-page py-20 sm:py-28">
+        <SectionTitle
+          align="center"
+          eyebrow="Our Sectors"
+          title="Beyond academia — three more pillars of growth."
+          description="Alongside education, Ramotitanico drives sustainable development through construction, a peer-to-peer car rental marketplace, and agricultural consultancy."
+        />
+        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+          {businessAreas.map((area) => (
+            <div
+              key={area.title}
+              className="flex flex-col rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
+            >
+              <div className="flex items-start gap-4">
+                <span className="grid h-14 w-14 flex-shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground">
+                  <area.icon className="h-7 w-7" />
+                </span>
+                <span className="mt-1 inline-block rounded-full bg-accent/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-accent">
+                  {area.tag}
+                </span>
+              </div>
+              <h3 className="mt-5 font-display text-2xl font-semibold text-primary">{area.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{area.desc}</p>
+              <ul className="mt-6 space-y-2.5">
+                {area.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2.5 text-sm text-foreground/80">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
