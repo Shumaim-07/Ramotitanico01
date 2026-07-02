@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, GraduationCap, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/Ramotitanico.jpeg";
+import logo from "@/assets/Ramotitanico.png";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
@@ -46,7 +46,7 @@ export function Navbar() {
     <img 
       src={logo} 
       alt="Ramotitanico" 
-      className="h-16 w-auto object-contain" 
+      className="h-16 w-auto object-contain mix-blend-multiply" 
     />
   </span>
 </Link>
