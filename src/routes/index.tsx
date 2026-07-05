@@ -172,7 +172,7 @@ function HomePage() {
             <span className="inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               Braga · Portugal · Worldwide
             </span>
-            <h1 className="mt-6 font-display text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-3xl font-semibold leading-tight sm:text-5xl md:text-6xl lg:text-5xl">
               Empowering Communities Through Education, Construction, Transport & Agriculture
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
@@ -205,10 +205,11 @@ function HomePage() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <SectionTitle
-              eyebrow="About Ramotitanico"
-              title="Four sectors, one organisation rooted in Braga."
-              description="From our headquarters in Braga, we operate across education, construction, transport, and agriculture — each sector contributing to Portugal's development and our global mission. We connect scholars across continents, build lasting infrastructure, put people in motion, and cultivate sustainable food systems."
-            />
+  eyebrow="About Ramotitanico"
+  title="Four sectors, one organisation rooted in Braga."
+  description="From our headquarters in Braga, we operate across education, construction, transport, and agriculture — each sector contributing to Portugal's development and our global mission. We connect scholars across continents, build lasting infrastructure, put people in motion, and cultivate sustainable food systems."
+  className="[&_p]:text-justify [&_p]:[text-align-last:justify]"
+/>
             <Link
               to="/about"
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"

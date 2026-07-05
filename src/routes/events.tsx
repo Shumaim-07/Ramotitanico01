@@ -2,6 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Award, CalendarCheck, FileCheck2, FileText, Globe, Mic2, Network, Send } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
@@ -78,12 +86,36 @@ function EventsPage() {
                 and research.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href="#call-for-papers"
-                  className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground hover:brightness-95"
-                >
-                  Call for Papers
-                </a>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground hover:brightness-95"
+                    >
+                      Call for Papers
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Call for Papers — Key Dates</DialogTitle>
+                      <DialogDescription>
+                        Important submission deadlines for the International Conference on
+                        Education, Research & Sustainable Innovation.
+                      </DialogDescription>
+                    </DialogHeader>
+                    <ul className="grid gap-4">
+                      {timeline.map((t) => (
+                        <li key={t.title} className="flex items-start gap-3">
+                          <t.icon className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                          <div>
+                            <p className="font-semibold text-primary">{t.date}</p>
+                            <p className="text-sm text-muted-foreground">{t.title}</p>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </DialogContent>
+                </Dialog>
                 <a
                   href="#timeline"
                   className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/30 px-5 py-3 text-sm font-semibold hover:bg-primary-foreground/10"

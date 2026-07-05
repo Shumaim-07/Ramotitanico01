@@ -27,7 +27,7 @@ export function SectionTitle({ eyebrow, title, description, align = "left", clas
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg ">
           {description}
         </p>
       )}

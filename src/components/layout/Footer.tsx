@@ -61,7 +61,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-primary-foreground/75">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span>Head Office — Braga, Portugal</span>
+                <span>Head Office — Travessa da Guarda, N31<br /> 4730-610  </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
@@ -71,7 +71,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span>+351 000 000 000</span>
+                <span>+351 9288 310 629</span>
               </li>
             </ul>
             <div className="mt-5 flex gap-2">
