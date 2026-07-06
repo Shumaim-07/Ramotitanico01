@@ -12,6 +12,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { GoogleTranslate } from "@/components/layout/GoogleTranslate";
 
 function NotFoundComponent() {
   return (
@@ -132,6 +133,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <GoogleTranslate />
         <Toaster richColors position="top-right" />
       </div>
     </QueryClientProvider>
