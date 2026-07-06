@@ -17,6 +17,7 @@ const serviceLinks = [
   { to: "/transport", label: "Transport" },
   { to: "/agriculture", label: "Agriculture" },
   { to: "/construction", label: "Construction" },
+  { to: "/general", label: "General" },
 ] as const;
 
 export function Navbar() {

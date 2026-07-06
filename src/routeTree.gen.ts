@@ -14,6 +14,7 @@ import { Route as TeamRouteImport } from './routes/team'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PublicationsRouteImport } from './routes/publications'
 import { Route as PartnershipsRouteImport } from './routes/partnerships'
+import { Route as GeneralRouteImport } from './routes/general'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as EducationRouteImport } from './routes/education'
@@ -47,6 +48,11 @@ const PublicationsRoute = PublicationsRouteImport.update({
 const PartnershipsRoute = PartnershipsRouteImport.update({
   id: '/partnerships',
   path: '/partnerships',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GeneralRoute = GeneralRouteImport.update({
+  id: '/general',
+  path: '/general',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryRoute = GalleryRouteImport.update({
@@ -105,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
+  '/general': typeof GeneralRoute
   '/partnerships': typeof PartnershipsRoute
   '/publications': typeof PublicationsRoute
   '/services': typeof ServicesRoute
@@ -121,6 +128,7 @@ export interface FileRoutesByTo {
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
+  '/general': typeof GeneralRoute
   '/partnerships': typeof PartnershipsRoute
   '/publications': typeof PublicationsRoute
   '/services': typeof ServicesRoute
@@ -138,6 +146,7 @@ export interface FileRoutesById {
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
+  '/general': typeof GeneralRoute
   '/partnerships': typeof PartnershipsRoute
   '/publications': typeof PublicationsRoute
   '/services': typeof ServicesRoute
@@ -156,6 +165,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/events'
     | '/gallery'
+    | '/general'
     | '/partnerships'
     | '/publications'
     | '/services'
@@ -172,6 +182,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/events'
     | '/gallery'
+    | '/general'
     | '/partnerships'
     | '/publications'
     | '/services'
@@ -188,6 +199,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/events'
     | '/gallery'
+    | '/general'
     | '/partnerships'
     | '/publications'
     | '/services'
@@ -205,6 +217,7 @@ export interface RootRouteChildren {
   EducationRoute: typeof EducationRoute
   EventsRoute: typeof EventsRoute
   GalleryRoute: typeof GalleryRoute
+  GeneralRoute: typeof GeneralRoute
   PartnershipsRoute: typeof PartnershipsRoute
   PublicationsRoute: typeof PublicationsRoute
   ServicesRoute: typeof ServicesRoute
@@ -247,6 +260,13 @@ declare module '@tanstack/react-router' {
       path: '/partnerships'
       fullPath: '/partnerships'
       preLoaderRoute: typeof PartnershipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/general': {
+      id: '/general'
+      path: '/general'
+      fullPath: '/general'
+      preLoaderRoute: typeof GeneralRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery': {
@@ -325,6 +345,7 @@ const rootRouteChildren: RootRouteChildren = {
   EducationRoute: EducationRoute,
   EventsRoute: EventsRoute,
   GalleryRoute: GalleryRoute,
+  GeneralRoute: GeneralRoute,
   PartnershipsRoute: PartnershipsRoute,
   PublicationsRoute: PublicationsRoute,
   ServicesRoute: ServicesRoute,
