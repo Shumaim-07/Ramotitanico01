@@ -11,17 +11,27 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TransportRouteImport } from './routes/transport'
 import { Route as TeamRouteImport } from './routes/team'
+import { Route as SubmitManuscriptRouteImport } from './routes/submit-manuscript'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PublicationsRouteImport } from './routes/publications'
+import { Route as PublicationEthicsRouteImport } from './routes/publication-ethics'
+import { Route as PeerReviewPolicyRouteImport } from './routes/peer-review-policy'
 import { Route as PartnershipsRouteImport } from './routes/partnerships'
 import { Route as GeneralRouteImport } from './routes/general'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as EducationRouteImport } from './routes/education'
+import { Route as EditorialBoardRouteImport } from './routes/editorial-board'
+import { Route as CurrentIssueRouteImport } from './routes/current-issue'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConstructionRouteImport } from './routes/construction'
+import { Route as CallForPapersRouteImport } from './routes/call-for-papers'
 import { Route as BecomeAConsultantRouteImport } from './routes/become-a-consultant'
+import { Route as AuthorGuidelinesRouteImport } from './routes/author-guidelines'
+import { Route as ArchivesRouteImport } from './routes/archives'
+import { Route as AimsAndScopeRouteImport } from './routes/aims-and-scope'
 import { Route as AgricultureRouteImport } from './routes/agriculture'
+import { Route as AboutTheJournalRouteImport } from './routes/about-the-journal'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -35,6 +45,11 @@ const TeamRoute = TeamRouteImport.update({
   path: '/team',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SubmitManuscriptRoute = SubmitManuscriptRouteImport.update({
+  id: '/submit-manuscript',
+  path: '/submit-manuscript',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -43,6 +58,16 @@ const ServicesRoute = ServicesRouteImport.update({
 const PublicationsRoute = PublicationsRouteImport.update({
   id: '/publications',
   path: '/publications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PublicationEthicsRoute = PublicationEthicsRouteImport.update({
+  id: '/publication-ethics',
+  path: '/publication-ethics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PeerReviewPolicyRoute = PeerReviewPolicyRouteImport.update({
+  id: '/peer-review-policy',
+  path: '/peer-review-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnershipsRoute = PartnershipsRouteImport.update({
@@ -70,6 +95,16 @@ const EducationRoute = EducationRouteImport.update({
   path: '/education',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EditorialBoardRoute = EditorialBoardRouteImport.update({
+  id: '/editorial-board',
+  path: '/editorial-board',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CurrentIssueRoute = CurrentIssueRouteImport.update({
+  id: '/current-issue',
+  path: '/current-issue',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -80,14 +115,39 @@ const ConstructionRoute = ConstructionRouteImport.update({
   path: '/construction',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CallForPapersRoute = CallForPapersRouteImport.update({
+  id: '/call-for-papers',
+  path: '/call-for-papers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BecomeAConsultantRoute = BecomeAConsultantRouteImport.update({
   id: '/become-a-consultant',
   path: '/become-a-consultant',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthorGuidelinesRoute = AuthorGuidelinesRouteImport.update({
+  id: '/author-guidelines',
+  path: '/author-guidelines',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchivesRoute = ArchivesRouteImport.update({
+  id: '/archives',
+  path: '/archives',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AimsAndScopeRoute = AimsAndScopeRouteImport.update({
+  id: '/aims-and-scope',
+  path: '/aims-and-scope',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AgricultureRoute = AgricultureRouteImport.update({
   id: '/agriculture',
   path: '/agriculture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutTheJournalRoute = AboutTheJournalRouteImport.update({
+  id: '/about-the-journal',
+  path: '/about-the-journal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -104,34 +164,54 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/about-the-journal': typeof AboutTheJournalRoute
   '/agriculture': typeof AgricultureRoute
+  '/aims-and-scope': typeof AimsAndScopeRoute
+  '/archives': typeof ArchivesRoute
+  '/author-guidelines': typeof AuthorGuidelinesRoute
   '/become-a-consultant': typeof BecomeAConsultantRoute
+  '/call-for-papers': typeof CallForPapersRoute
   '/construction': typeof ConstructionRoute
   '/contact': typeof ContactRoute
+  '/current-issue': typeof CurrentIssueRoute
+  '/editorial-board': typeof EditorialBoardRoute
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
   '/general': typeof GeneralRoute
   '/partnerships': typeof PartnershipsRoute
+  '/peer-review-policy': typeof PeerReviewPolicyRoute
+  '/publication-ethics': typeof PublicationEthicsRoute
   '/publications': typeof PublicationsRoute
   '/services': typeof ServicesRoute
+  '/submit-manuscript': typeof SubmitManuscriptRoute
   '/team': typeof TeamRoute
   '/transport': typeof TransportRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/about-the-journal': typeof AboutTheJournalRoute
   '/agriculture': typeof AgricultureRoute
+  '/aims-and-scope': typeof AimsAndScopeRoute
+  '/archives': typeof ArchivesRoute
+  '/author-guidelines': typeof AuthorGuidelinesRoute
   '/become-a-consultant': typeof BecomeAConsultantRoute
+  '/call-for-papers': typeof CallForPapersRoute
   '/construction': typeof ConstructionRoute
   '/contact': typeof ContactRoute
+  '/current-issue': typeof CurrentIssueRoute
+  '/editorial-board': typeof EditorialBoardRoute
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
   '/general': typeof GeneralRoute
   '/partnerships': typeof PartnershipsRoute
+  '/peer-review-policy': typeof PeerReviewPolicyRoute
+  '/publication-ethics': typeof PublicationEthicsRoute
   '/publications': typeof PublicationsRoute
   '/services': typeof ServicesRoute
+  '/submit-manuscript': typeof SubmitManuscriptRoute
   '/team': typeof TeamRoute
   '/transport': typeof TransportRoute
 }
@@ -139,17 +219,27 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/about-the-journal': typeof AboutTheJournalRoute
   '/agriculture': typeof AgricultureRoute
+  '/aims-and-scope': typeof AimsAndScopeRoute
+  '/archives': typeof ArchivesRoute
+  '/author-guidelines': typeof AuthorGuidelinesRoute
   '/become-a-consultant': typeof BecomeAConsultantRoute
+  '/call-for-papers': typeof CallForPapersRoute
   '/construction': typeof ConstructionRoute
   '/contact': typeof ContactRoute
+  '/current-issue': typeof CurrentIssueRoute
+  '/editorial-board': typeof EditorialBoardRoute
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
   '/general': typeof GeneralRoute
   '/partnerships': typeof PartnershipsRoute
+  '/peer-review-policy': typeof PeerReviewPolicyRoute
+  '/publication-ethics': typeof PublicationEthicsRoute
   '/publications': typeof PublicationsRoute
   '/services': typeof ServicesRoute
+  '/submit-manuscript': typeof SubmitManuscriptRoute
   '/team': typeof TeamRoute
   '/transport': typeof TransportRoute
 }
@@ -158,51 +248,81 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/about-the-journal'
     | '/agriculture'
+    | '/aims-and-scope'
+    | '/archives'
+    | '/author-guidelines'
     | '/become-a-consultant'
+    | '/call-for-papers'
     | '/construction'
     | '/contact'
+    | '/current-issue'
+    | '/editorial-board'
     | '/education'
     | '/events'
     | '/gallery'
     | '/general'
     | '/partnerships'
+    | '/peer-review-policy'
+    | '/publication-ethics'
     | '/publications'
     | '/services'
+    | '/submit-manuscript'
     | '/team'
     | '/transport'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/about-the-journal'
     | '/agriculture'
+    | '/aims-and-scope'
+    | '/archives'
+    | '/author-guidelines'
     | '/become-a-consultant'
+    | '/call-for-papers'
     | '/construction'
     | '/contact'
+    | '/current-issue'
+    | '/editorial-board'
     | '/education'
     | '/events'
     | '/gallery'
     | '/general'
     | '/partnerships'
+    | '/peer-review-policy'
+    | '/publication-ethics'
     | '/publications'
     | '/services'
+    | '/submit-manuscript'
     | '/team'
     | '/transport'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/about-the-journal'
     | '/agriculture'
+    | '/aims-and-scope'
+    | '/archives'
+    | '/author-guidelines'
     | '/become-a-consultant'
+    | '/call-for-papers'
     | '/construction'
     | '/contact'
+    | '/current-issue'
+    | '/editorial-board'
     | '/education'
     | '/events'
     | '/gallery'
     | '/general'
     | '/partnerships'
+    | '/peer-review-policy'
+    | '/publication-ethics'
     | '/publications'
     | '/services'
+    | '/submit-manuscript'
     | '/team'
     | '/transport'
   fileRoutesById: FileRoutesById
@@ -210,17 +330,27 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AboutTheJournalRoute: typeof AboutTheJournalRoute
   AgricultureRoute: typeof AgricultureRoute
+  AimsAndScopeRoute: typeof AimsAndScopeRoute
+  ArchivesRoute: typeof ArchivesRoute
+  AuthorGuidelinesRoute: typeof AuthorGuidelinesRoute
   BecomeAConsultantRoute: typeof BecomeAConsultantRoute
+  CallForPapersRoute: typeof CallForPapersRoute
   ConstructionRoute: typeof ConstructionRoute
   ContactRoute: typeof ContactRoute
+  CurrentIssueRoute: typeof CurrentIssueRoute
+  EditorialBoardRoute: typeof EditorialBoardRoute
   EducationRoute: typeof EducationRoute
   EventsRoute: typeof EventsRoute
   GalleryRoute: typeof GalleryRoute
   GeneralRoute: typeof GeneralRoute
   PartnershipsRoute: typeof PartnershipsRoute
+  PeerReviewPolicyRoute: typeof PeerReviewPolicyRoute
+  PublicationEthicsRoute: typeof PublicationEthicsRoute
   PublicationsRoute: typeof PublicationsRoute
   ServicesRoute: typeof ServicesRoute
+  SubmitManuscriptRoute: typeof SubmitManuscriptRoute
   TeamRoute: typeof TeamRoute
   TransportRoute: typeof TransportRoute
 }
@@ -241,6 +371,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TeamRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/submit-manuscript': {
+      id: '/submit-manuscript'
+      path: '/submit-manuscript'
+      fullPath: '/submit-manuscript'
+      preLoaderRoute: typeof SubmitManuscriptRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -253,6 +390,20 @@ declare module '@tanstack/react-router' {
       path: '/publications'
       fullPath: '/publications'
       preLoaderRoute: typeof PublicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/publication-ethics': {
+      id: '/publication-ethics'
+      path: '/publication-ethics'
+      fullPath: '/publication-ethics'
+      preLoaderRoute: typeof PublicationEthicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/peer-review-policy': {
+      id: '/peer-review-policy'
+      path: '/peer-review-policy'
+      fullPath: '/peer-review-policy'
+      preLoaderRoute: typeof PeerReviewPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partnerships': {
@@ -290,6 +441,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EducationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/editorial-board': {
+      id: '/editorial-board'
+      path: '/editorial-board'
+      fullPath: '/editorial-board'
+      preLoaderRoute: typeof EditorialBoardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/current-issue': {
+      id: '/current-issue'
+      path: '/current-issue'
+      fullPath: '/current-issue'
+      preLoaderRoute: typeof CurrentIssueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -304,6 +469,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConstructionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/call-for-papers': {
+      id: '/call-for-papers'
+      path: '/call-for-papers'
+      fullPath: '/call-for-papers'
+      preLoaderRoute: typeof CallForPapersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/become-a-consultant': {
       id: '/become-a-consultant'
       path: '/become-a-consultant'
@@ -311,11 +483,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BecomeAConsultantRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/author-guidelines': {
+      id: '/author-guidelines'
+      path: '/author-guidelines'
+      fullPath: '/author-guidelines'
+      preLoaderRoute: typeof AuthorGuidelinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archives': {
+      id: '/archives'
+      path: '/archives'
+      fullPath: '/archives'
+      preLoaderRoute: typeof ArchivesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aims-and-scope': {
+      id: '/aims-and-scope'
+      path: '/aims-and-scope'
+      fullPath: '/aims-and-scope'
+      preLoaderRoute: typeof AimsAndScopeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/agriculture': {
       id: '/agriculture'
       path: '/agriculture'
       fullPath: '/agriculture'
       preLoaderRoute: typeof AgricultureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-the-journal': {
+      id: '/about-the-journal'
+      path: '/about-the-journal'
+      fullPath: '/about-the-journal'
+      preLoaderRoute: typeof AboutTheJournalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -338,17 +538,27 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AboutTheJournalRoute: AboutTheJournalRoute,
   AgricultureRoute: AgricultureRoute,
+  AimsAndScopeRoute: AimsAndScopeRoute,
+  ArchivesRoute: ArchivesRoute,
+  AuthorGuidelinesRoute: AuthorGuidelinesRoute,
   BecomeAConsultantRoute: BecomeAConsultantRoute,
+  CallForPapersRoute: CallForPapersRoute,
   ConstructionRoute: ConstructionRoute,
   ContactRoute: ContactRoute,
+  CurrentIssueRoute: CurrentIssueRoute,
+  EditorialBoardRoute: EditorialBoardRoute,
   EducationRoute: EducationRoute,
   EventsRoute: EventsRoute,
   GalleryRoute: GalleryRoute,
   GeneralRoute: GeneralRoute,
   PartnershipsRoute: PartnershipsRoute,
+  PeerReviewPolicyRoute: PeerReviewPolicyRoute,
+  PublicationEthicsRoute: PublicationEthicsRoute,
   PublicationsRoute: PublicationsRoute,
   ServicesRoute: ServicesRoute,
+  SubmitManuscriptRoute: SubmitManuscriptRoute,
   TeamRoute: TeamRoute,
   TransportRoute: TransportRoute,
 }
