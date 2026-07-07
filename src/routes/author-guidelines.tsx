@@ -1,14 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FileText, CheckCircle2, Ruler, Quote } from "lucide-react";
+import { 
+  FileText, 
+  CheckCircle2, 
+  Ruler, 
+  Quote,
+  User,
+  Mail,
+  Key,
+  BookOpen,
+  FileUp,
+  ShieldCheck
+} from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
 
 export const Route = createFileRoute("/author-guidelines")({
   head: () => ({
     meta: [
-      { title: "Author Guidelines — Ramotitanico" },
-      { name: "description", content: "Manuscript preparation and formatting guidelines for authors submitting to the Ramotitanico Journal." },
-      { property: "og:title", content: "Author Guidelines — Ramotitanico" },
+      { title: "Author Guidelines — Academia Humanities Review" },
+      { name: "description", content: "Manuscript preparation and formatting guidelines for authors submitting to Academia Humanities Review." },
+      { property: "og:title", content: "Author Guidelines — Academia Humanities Review" },
       { property: "og:description", content: "Formatting, structure, and submission requirements for prospective journal authors." },
       { property: "og:url", content: "/author-guidelines" },
     ],
@@ -17,20 +28,21 @@ export const Route = createFileRoute("/author-guidelines")({
   component: AuthorGuidelinesPage,
 });
 
-const checklist = [
-  "Manuscript is original and not under review elsewhere",
-  "Word count: 5,000–8,000 words (excluding references)",
-  "Structured abstract of 200–250 words with 4–6 keywords",
-  "APA 7th edition referencing throughout",
-  "All tables and figures numbered with captions",
-  "Author identifying information removed for blind review",
+const submissionRequirements = [
+  { icon: FileText, label: "Title of the Article" },
+  { icon: User, label: "Author Name and Affiliation" },
+  { icon: Mail, label: "Email Address" },
+  { icon: BookOpen, label: "Abstract of 150–250 words" },
+  { icon: Key, label: "5–7 Keywords" },
+  { icon: FileText, label: "Main Article" },
+  { icon: Quote, label: "References in APA 7th Edition Style" },
 ];
 
-const sections = [
-  { icon: FileText, title: "Manuscript Structure", desc: "Title page, structured abstract, introduction, literature review, methodology, findings, discussion, conclusion, and references." },
-  { icon: Ruler, title: "Formatting", desc: "12pt Times New Roman, double-spaced, A4 page size, 2.5cm margins, submitted as a single .docx or .pdf file." },
-  { icon: Quote, title: "Referencing Style", desc: "APA 7th edition for in-text citations and the reference list. DOIs should be included wherever available." },
-  { icon: CheckCircle2, title: "Pre-Submission Checklist", desc: "Confirm the checklist below is complete before submitting through the manuscript submission page." },
+const formatRequirements = [
+  { icon: Ruler, label: "Word Count", desc: "5,000–8,000 words including references" },
+  { icon: FileText, label: "File Format", desc: "Microsoft Word format (.docx)" },
+  { icon: ShieldCheck, label: "Plagiarism Check", desc: "All manuscripts screened before review" },
+  { icon: CheckCircle2, label: "Scope", desc: "Original manuscripts related to humanities and interdisciplinary studies" },
 ];
 
 function AuthorGuidelinesPage() {
@@ -43,39 +55,113 @@ function AuthorGuidelinesPage() {
       />
 
       <section className="container-page py-20">
-        <div className="grid gap-6 md:grid-cols-2">
-          {sections.map((s) => (
-            <article
-              key={s.title}
-              className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)]"
-            >
-              <div className="flex items-start gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground">
-                  <s.icon className="h-6 w-6" />
+        {/* Overview Paragraph */}
+        <div className="max-w-4xl space-y-4">
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Authors should submit original manuscripts related to the humanities and interdisciplinary studies. 
+            Manuscripts should normally be between <strong>5,000 and 8,000 words</strong>, including references.
+          </p>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            All manuscripts should be submitted in <strong>Microsoft Word format</strong>. The journal will use 
+            plagiarism-checking software before sending manuscripts for review.
+          </p>
+        </div>
+
+        {/* Submission Requirements */}
+        <div className="mt-16">
+          <SectionTitle
+            eyebrow="Requirements"
+            title="Submission Requirements"
+            description="Every submission must include the following elements:"
+          />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {submissionRequirements.map((item) => (
+              <div
+                key={item.label}
+                className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-primary hover:shadow-[var(--shadow-elevated)]"
+              >
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
+                  <item.icon className="h-5 w-5" />
                 </span>
-                <div>
-                  <h3 className="font-display text-lg font-semibold text-primary">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                </div>
+                <span className="font-display text-sm font-medium text-primary">{item.label}</span>
               </div>
-            </article>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Format Requirements */}
+        <div className="mt-16">
+          <SectionTitle
+            eyebrow="Formatting"
+            title="Format Requirements"
+            description="Please ensure your manuscript meets these formatting specifications:"
+          />
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {formatRequirements.map((item) => (
+              <article
+                key={item.label}
+                className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
+              >
+                <span className="grid h-12 w-12 place-items-center rounded-xl bg-primary text-primary-foreground">
+                  <item.icon className="h-6 w-6" />
+                </span>
+                <h4 className="mt-3 font-display font-semibold text-primary">{item.label}</h4>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* Detailed Breakdown Card */}
+        <div className="mt-16 rounded-2xl border border-border bg-surface p-8">
+          <div className="flex items-start gap-4">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent text-accent-foreground">
+              <FileText className="h-6 w-6" />
+            </span>
+            <div className="flex-1">
+              <h3 className="font-display text-xl font-semibold text-primary">Manuscript Structure</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Your manuscript should be organized in the following order:
+              </p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Title of the article",
+                  "Author name(s) and affiliation(s)",
+                  "Email address(es)",
+                  "Abstract (150–250 words)",
+                  "5–7 Keywords",
+                  "Main article body",
+                  "References (APA 7th Edition)",
+                ].map((item, index) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-2"
+                  >
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold text-primary">
+                      {index + 1}
+                    </span>
+                    <span className="text-sm text-foreground/85">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Important Note */}
+        <div className="mt-8 rounded-xl border border-primary/20 bg-primary/5 p-6">
+          <div className="flex items-start gap-4">
+            <ShieldCheck className="h-5 w-5 shrink-0 text-primary" />
+            <div>
+              <h4 className="font-display font-semibold text-primary">Important Note</h4>
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                All manuscripts will be screened using plagiarism-checking software before being sent for 
+                peer review. Please ensure your work is original and properly cited before submission.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-
-      <div className="bg-surface">
-        <section className="container-page py-20">
-          <SectionTitle eyebrow="Before You Submit" title="Pre-submission checklist" />
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-            {checklist.map((item) => (
-              <li key={item} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                <span className="text-sm text-foreground/85">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
     </>
   );
 }

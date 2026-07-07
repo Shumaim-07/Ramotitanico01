@@ -20,15 +20,6 @@ const serviceLinks = [
 ] as const;
 
 const journalLinks = [
-  { to: "/about-the-journal", label: "About the Journal" },
-  { to: "/aims-and-scope", label: "Aims and Scope" },
-  { to: "/editorial-board", label: "Editorial Board" },
-  { to: "/author-guidelines", label: "Author Guidelines" },
-  { to: "/peer-review-policy", label: "Peer Review Policy" },
-  { to: "/publication-ethics", label: "Publication Ethics" },
-  { to: "/current-issue", label: "Current Issue" },
-  { to: "/archives", label: "Archives" },
-  { to: "/call-for-papers", label: "Call for Papers" },
   { to: "/submit-manuscript", label: "Submit Manuscript" },
 ] as const;
 
@@ -118,22 +109,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Journal sub-nav: flat links, wraps to a second line on narrower desktop widths */}
-      <nav className="hidden border-t border-border/70 bg-surface lg:block">
-        <div className="container-page flex flex-wrap items-center justify-center gap-x-1 gap-y-1 py-1.5">
-          {journalLinks.map((j) => (
-            <Link
-              key={j.to}
-              to={j.to}
-              className="rounded px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-foreground/70 transition-colors hover:bg-secondary hover:text-primary"
-              activeProps={{ className: "text-primary bg-secondary" }}
-              activeOptions={{ exact: j.to === "/" }}
-            >
-              {j.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
 
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
@@ -206,7 +181,6 @@ export function Navbar() {
                     onClick={() => setOpen(false)}
                     className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary"
                     activeProps={{ className: "text-primary bg-secondary" }}
-                    activeOptions={{ exact: j.to === "/" }}
                   >
                     {j.label}
                   </Link>
