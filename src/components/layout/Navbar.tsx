@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, GraduationCap, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/Ramotitanico.png";
+import { LanguageToggle } from "@/components/layout/GoogleTranslate";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
@@ -46,14 +47,14 @@ export function Navbar() {
     >
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Link to="/" className="flex min-w-0 items-center gap-2.5 shrink-0">
-  <span className="flex min-w-0 flex-col leading-tight">
-    <img 
-      src={logo} 
-      alt="Ramotitanico" 
-      className="h-16 w-auto object-contain mix-blend-multiply" 
-    />
-  </span>
-</Link>
+          <span className="flex min-w-0 flex-col leading-tight">
+            <img 
+              src={logo} 
+              alt="Ramotitanico" 
+              className="h-16 w-auto object-contain mix-blend-multiply" 
+            />
+          </span>
+        </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
           {links.map((l) => (
@@ -91,24 +92,27 @@ export function Navbar() {
           </div>
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-2 lg:flex">
           <Link
             to="/become-a-consultant"
             className="inline-flex items-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:brightness-95"
           >
             Become a Consultant
           </Link>
+          <LanguageToggle />
         </div>
 
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="grid h-10 w-10 place-items-center rounded-md border border-border lg:hidden"
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageToggle />
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="grid h-10 w-10 place-items-center rounded-md border border-border"
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
-
 
       {open && (
         <div className="border-t border-border bg-background lg:hidden">

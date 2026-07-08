@@ -185,32 +185,16 @@
   animation: fade-up 0.6s ease-out both;
 }
 
-/* Google Translate widget: keep it compact and stop it pushing the layout down. */
-.goog-te-banner-frame.skiptranslate {
+/* Google Translate: widget UI is replaced by a custom toggle button, but
+   Google still injects a banner iframe on translate. Its class name is
+   obfuscated and changes across Google's releases, so target the stable
+   "skiptranslate" marker instead of a specific (brittle) class. */
+iframe.skiptranslate {
   display: none !important;
 }
 
 body {
   top: 0 !important;
-}
-
-.google-translate-widget .goog-te-gadget {
-  display: flex;
-  align-items: center;
-  font-size: 0;
-}
-
-.google-translate-widget .goog-te-gadget > span {
-  display: none;
-}
-
-.google-translate-widget .goog-te-combo {
-  margin: 0;
-  padding: 0.25rem 0.5rem;
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  border-radius: 0.375rem;
-  border: 1px solid var(--border);
 }
 
 
