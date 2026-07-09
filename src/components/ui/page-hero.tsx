@@ -1,13 +1,17 @@
 import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface Props {
   eyebrow?: string;
   title: ReactNode;
   description?: ReactNode;
   children?: ReactNode;
+  align?: "left" | "center";
 }
 
-export function PageHero({ eyebrow, title, description, children }: Props) {
+export function PageHero({ eyebrow, title, description, children, align = "left" }: Props) {
+  const centered = align === "center";
+
   return (
     <section
       className="relative overflow-hidden text-primary-foreground"
@@ -22,17 +26,27 @@ export function PageHero({ eyebrow, title, description, children }: Props) {
           backgroundSize: "32px 32px, 48px 48px",
         }}
       />
-      <div className="container-page relative py-20 sm:py-28">
+      <div className={cn("container-page relative py-20 sm:py-28", centered && "text-center")}>
         {eyebrow && (
           <span className="inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             {eyebrow}
           </span>
         )}
-        <h1 className="mt-5 max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">
+        <h1
+          className={cn(
+            "mt-5 max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl",
+            centered && "mx-auto",
+          )}
+        >
           {title}
         </h1>
         {description && (
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+          <p
+            className={cn(
+              "mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/80 sm:text-lg",
+              centered && "mx-auto",
+            )}
+          >
             {description}
           </p>
         )}

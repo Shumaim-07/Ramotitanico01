@@ -57,9 +57,9 @@ function TransportPage() {
         eyebrow="Car Rental & Mobility"
         title={
   <>
-    Rent a car
+    Rent a Car
     <br />
-    Or rent yours out
+    Or Rent Out Yours 
   </>
 }
         description="Ramotitanico operates a peer-to-peer car rental marketplace across Portugal. Rent directly from our managed fleet, or register your own vehicle and earn while it sits idle."

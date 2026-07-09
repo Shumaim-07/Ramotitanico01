@@ -133,6 +133,7 @@ function JournalPage() {
   return (
     <>
       <PageHero
+        align="center"
         eyebrow="Journal Services"
         title="Academia Humanities Review"
         description="From first draft to indexed publication, our editorial specialists help scholars navigate the path to credible, discoverable, and properly attributed academic work."
