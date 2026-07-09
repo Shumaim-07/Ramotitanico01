@@ -17,7 +17,7 @@ import { Route as PublicationsRouteImport } from './routes/publications'
 import { Route as PublicationEthicsRouteImport } from './routes/publication-ethics'
 import { Route as PeerReviewPolicyRouteImport } from './routes/peer-review-policy'
 import { Route as PartnershipsRouteImport } from './routes/partnerships'
-import { Route as GeneralRouteImport } from './routes/general'
+import { Route as JournalRouteImport } from './routes/journal'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as EducationRouteImport } from './routes/education'
@@ -75,9 +75,9 @@ const PartnershipsRoute = PartnershipsRouteImport.update({
   path: '/partnerships',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GeneralRoute = GeneralRouteImport.update({
-  id: '/general',
-  path: '/general',
+const JournalRoute = JournalRouteImport.update({
+  id: '/journal',
+  path: '/journal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryRoute = GalleryRouteImport.update({
@@ -178,7 +178,7 @@ export interface FileRoutesByFullPath {
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
-  '/general': typeof GeneralRoute
+  '/journal': typeof JournalRoute
   '/partnerships': typeof PartnershipsRoute
   '/peer-review-policy': typeof PeerReviewPolicyRoute
   '/publication-ethics': typeof PublicationEthicsRoute
@@ -205,7 +205,7 @@ export interface FileRoutesByTo {
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
-  '/general': typeof GeneralRoute
+  '/journal': typeof JournalRoute
   '/partnerships': typeof PartnershipsRoute
   '/peer-review-policy': typeof PeerReviewPolicyRoute
   '/publication-ethics': typeof PublicationEthicsRoute
@@ -233,7 +233,7 @@ export interface FileRoutesById {
   '/education': typeof EducationRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
-  '/general': typeof GeneralRoute
+  '/journal': typeof JournalRoute
   '/partnerships': typeof PartnershipsRoute
   '/peer-review-policy': typeof PeerReviewPolicyRoute
   '/publication-ethics': typeof PublicationEthicsRoute
@@ -262,7 +262,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/events'
     | '/gallery'
-    | '/general'
+    | '/journal'
     | '/partnerships'
     | '/peer-review-policy'
     | '/publication-ethics'
@@ -289,7 +289,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/events'
     | '/gallery'
-    | '/general'
+    | '/journal'
     | '/partnerships'
     | '/peer-review-policy'
     | '/publication-ethics'
@@ -316,7 +316,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/events'
     | '/gallery'
-    | '/general'
+    | '/journal'
     | '/partnerships'
     | '/peer-review-policy'
     | '/publication-ethics'
@@ -344,7 +344,7 @@ export interface RootRouteChildren {
   EducationRoute: typeof EducationRoute
   EventsRoute: typeof EventsRoute
   GalleryRoute: typeof GalleryRoute
-  GeneralRoute: typeof GeneralRoute
+  JournalRoute: typeof JournalRoute
   PartnershipsRoute: typeof PartnershipsRoute
   PeerReviewPolicyRoute: typeof PeerReviewPolicyRoute
   PublicationEthicsRoute: typeof PublicationEthicsRoute
@@ -413,11 +413,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartnershipsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/general': {
-      id: '/general'
-      path: '/general'
-      fullPath: '/general'
-      preLoaderRoute: typeof GeneralRouteImport
+    '/journal': {
+      id: '/journal'
+      path: '/journal'
+      fullPath: '/journal'
+      preLoaderRoute: typeof JournalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery': {
@@ -552,7 +552,7 @@ const rootRouteChildren: RootRouteChildren = {
   EducationRoute: EducationRoute,
   EventsRoute: EventsRoute,
   GalleryRoute: GalleryRoute,
-  GeneralRoute: GeneralRoute,
+  JournalRoute: JournalRoute,
   PartnershipsRoute: PartnershipsRoute,
   PeerReviewPolicyRoute: PeerReviewPolicyRoute,
   PublicationEthicsRoute: PublicationEthicsRoute,

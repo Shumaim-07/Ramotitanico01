@@ -19,18 +19,18 @@ import {
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
 
-export const Route = createFileRoute("/general")({
+export const Route = createFileRoute("/journal")({
   head: () => ({
     meta: [
       { title: "Publication Support — Ramotitanico" },
       { name: "description", content: "Research and publication support services including manuscript development, editorial review, journal matching, indexing, and dissemination for scholars worldwide." },
       { property: "og:title", content: "Publication Support — Ramotitanico" },
       { property: "og:description", content: "Ramotitanico's publication support services: manuscript guidance, peer review coordination, journal matching, indexing, dissemination, and proceedings publishing." },
-      { property: "og:url", content: "/general" },
+      { property: "og:url", content: "/journal" },
     ],
-    links: [{ rel: "canonical", href: "/general" }],
+    links: [{ rel: "canonical", href: "/journal" }],
   }),
-  component: GeneralPage,
+  component: JournalPage,
 });
 
 const services = [
@@ -67,78 +67,78 @@ const services = [
 ];
 
 const journalPages = [
-  { 
-    to: "/about-the-journal", 
-    label: "About the Journal", 
+  {
+    to: "/about-the-journal",
+    label: "About the Journal",
     icon: BookOpen,
     desc: "Editorial mission, publication policies, and journal overview — the foundation of our scholarly publishing standards and commitment to quality research."
   },
-  { 
-    to: "/aims-and-scope", 
-    label: "Aims and Scope", 
+  {
+    to: "/aims-and-scope",
+    label: "Aims and Scope",
     icon: Target,
     desc: "Disciplinary focus, thematic priorities, and the types of contributions we welcome. Find out if your research aligns with our editorial vision."
   },
-  { 
-    to: "/editorial-board", 
-    label: "Editorial Board", 
+  {
+    to: "/editorial-board",
+    label: "Editorial Board",
     icon: Users2,
     desc: "Meet our distinguished editors and reviewers — leading experts who ensure rigorous peer review and maintain the journal's academic integrity."
   },
-  { 
-    to: "/author-guidelines", 
-    label: "Author Guidelines", 
+  {
+    to: "/author-guidelines",
+    label: "Author Guidelines",
     icon: FileText,
     desc: "Submission requirements, formatting standards, and step-by-step instructions — everything you need to prepare your manuscript for submission."
   },
-  { 
-    to: "/peer-review-policy", 
-    label: "Peer Review Policy", 
+  {
+    to: "/peer-review-policy",
+    label: "Peer Review Policy",
     icon: ShieldCheck,
     desc: "Our double-blind review process, evaluation criteria, and timelines — ensuring fair, constructive, and timely assessment of all submissions."
   },
-  { 
-    to: "/publication-ethics", 
-    label: "Publication Ethics", 
+  {
+    to: "/publication-ethics",
+    label: "Publication Ethics",
     icon: Scale,
     desc: "Authorship standards, originality requirements, and research integrity guidelines — upholding the highest ethical practices in scholarly publishing."
   },
-  { 
-    to: "/current-issue", 
-    label: "Current Issue", 
+  {
+    to: "/current-issue",
+    label: "Current Issue",
     icon: Newspaper,
     desc: "The latest published research — explore cutting-edge scholarship and recent contributions from the global academic community."
   },
-  { 
-    to: "/archives", 
-    label: "Archives", 
+  {
+    to: "/archives",
+    label: "Archives",
     icon: Archive,
     desc: "Past issues and historical content — browse our complete collection of published articles spanning multiple years and disciplines."
   },
-  { 
-    to: "/call-for-papers", 
-    label: "Call for Papers", 
+  {
+    to: "/call-for-papers",
+    label: "Call for Papers",
     icon: Send,
     desc: "Upcoming themes, submission deadlines, and special issues — opportunities to contribute your research to focused scholarly conversations."
   },
-  { 
-    to: "/submit-manuscript", 
-    label: "Submit Manuscript", 
+  {
+    to: "/submit-manuscript",
+    label: "Submit Manuscript",
     icon: FileUp,
     desc: "Ready to publish? Submit your manuscript through our secure online system and begin the peer review process today."
   },
 ] as const;
 
-function GeneralPage() {
+function JournalPage() {
   return (
     <>
       <PageHero
-        eyebrow="General Services"
+        eyebrow="Journal Services"
         title="Publication support for researchers who deserve to be read."
         description="From first draft to indexed publication, our editorial specialists help scholars navigate the path to credible, discoverable, and properly attributed academic work."
       />
 
-      <section className="container-page py-20">
+      {/* <section className="container-page py-20">
         <SectionTitle
           eyebrow="What We Offer"
           title="Six publication services. One goal: getting your research seen."
@@ -162,7 +162,7 @@ function GeneralPage() {
             </article>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <div className="bg-surface">
         <section className="container-page py-20">

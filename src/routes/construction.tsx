@@ -55,7 +55,7 @@ function ConstructionPage() {
     <>
       <PageHero
         eyebrow="Construction & Development"
-        title="We plan, manage, and build."
+        title="We Plan, Manage, and Build."
         description="From residential homes to commercial premises and public infrastructure, Ramotitanico delivers construction projects across Portugal with sustainability, compliance, and quality built in at every stage."
       />
 

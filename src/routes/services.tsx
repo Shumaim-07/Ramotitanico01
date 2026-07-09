@@ -18,9 +18,17 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Ramotitanico" },
-      { name: "description", content: "Ramotitanico's full range of services across education, construction, car rental, and agriculture — four sectors, one organisation." },
+      {
+        name: "description",
+        content:
+          "Ramotitanico's full range of services across education, construction, car rental, and agriculture — four sectors, one organisation.",
+      },
       { property: "og:title", content: "Services — Ramotitanico" },
-      { property: "og:description", content: "From academic consultancy and conferences to construction projects, car rental, and agricultural advisory — Ramotitanico's four-sector service portfolio." },
+      {
+        property: "og:description",
+        content:
+          "From academic consultancy and conferences to construction projects, car rental, and agricultural advisory — Ramotitanico's four-sector service portfolio.",
+      },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -93,7 +101,13 @@ function ServicesPage() {
     <>
       <PageHero
         eyebrow="Our Services"
-        title="Four sectors. One institutional standard."
+        title={
+    <>
+      Four Sectors
+      <br />
+      One Institutional Standard
+    </>
+  }
         description="Ramotitanico operates across education, construction, transport, and agriculture — each area staffed by practitioners who bring the same rigour and commitment to excellence."
       />
 

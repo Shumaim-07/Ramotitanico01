@@ -55,7 +55,11 @@ function AgriculturePage() {
     <>
       <PageHero
         eyebrow="Agriculture & Agritech"
-        title="Cultivating sustainable food systems for a changing world."
+        title={
+          <>
+            Cultivating Sustainable Food Systems for a Changing World
+          </>
+        }
         description="We work with producers, cooperatives, and agribusinesses to strengthen Portugal's agricultural sector through expert consultancy, technology-driven solutions, and sustainable farming practices that boost productivity and protect the land."
       />
 

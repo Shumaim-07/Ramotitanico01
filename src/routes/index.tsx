@@ -173,7 +173,7 @@ function HomePage() {
               Braga · Portugal · Worldwide
             </span>
             <h1 className="mt-6 font-display text-3xl font-semibold leading-tight sm:text-5xl md:text-6xl lg:text-5xl">
-              Empowering Communities Through Education, Construction, Transport & Agriculture
+              Empowering Communities Through Education, Transport, Agriculture & Construction
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
               Ramotitanico is a Portugal-based multidisciplinary organisation operating across four
@@ -263,34 +263,6 @@ function HomePage() {
               className="inline-flex items-center gap-2 rounded-md border border-primary bg-background px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
             >
               View all services <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Research & Publication Support */}
-      <section className="bg-primary py-20 text-primary-foreground sm:py-28">
-        <div className="container-page max-w-3xl text-center">
-          <span className="inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Research & Publication Support
-          </span>
-          <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            From first draft to indexed publication.
-          </h2>
-          <p className="mt-5 leading-relaxed text-primary-foreground/80">
-            Our editorial team supports scholars at every stage of the publishing journey — from
-            strengthening a manuscript's methodology and argument, through independent peer review,
-            to placing the finished work in indexed, reputable outlets. Whether you're preparing
-            your first submission or coordinating proceedings for a major conference, we help
-            ensure your research finds the audience it deserves — through our own academic journal
-            and a global network of publishing partners.
-          </p>
-          <div className="mt-8">
-            <Link
-              to="/general"
-              className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:brightness-95"
-            >
-              Explore More <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
