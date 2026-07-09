@@ -71,7 +71,7 @@ function PeerReviewPage() {
     <>
       <PageHero
         eyebrow="Peer Review Policy"
-        title="Rigorous, double-blind, and transparent."
+        title="Rigorous, Double-Blind, and Transparent"
         description="Every submission that passes initial screening undergoes double-blind peer review by at least two independent experts in the relevant field."
       />
 

@@ -29,7 +29,7 @@ function SubmitManuscriptPage() {
     <>
       <PageHero
         eyebrow="Submit Manuscript"
-        title="Ready to submit? Here's how."
+        title="Ready to Submit? Here's How."
         description="Manuscripts are submitted directly to the editorial office by email. Please review the requirements below before sending your submission."
       />
 

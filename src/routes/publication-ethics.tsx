@@ -62,7 +62,7 @@ function PublicationEthicsPage() {
     <>
       <PageHero
         eyebrow="Publication Ethics"
-        title="Integrity is non-negotiable."
+        title="Integrity is Non-Negotiable"
         description="The journal follows internationally accepted ethical principles for scholarly publishing and expects all parties to act with honesty, fairness, and transparency."
       />
 

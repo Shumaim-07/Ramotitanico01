@@ -85,7 +85,7 @@ function EditorialBoardPage() {
     <>
       <PageHero
         eyebrow="Editorial Board"
-        title="The editors behind every decision."
+        title="The Editors Behind Every Decision"
         description="Editorial decisions are made by an international board of scholars and practitioners with direct expertise across the journal's subject areas."
       />
 

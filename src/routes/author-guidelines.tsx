@@ -50,7 +50,7 @@ function AuthorGuidelinesPage() {
     <>
       <PageHero
         eyebrow="Author Guidelines"
-        title="How to prepare your manuscript."
+        title="How to Prepare Your Manuscript"
         description="Manuscripts that follow these guidelines move through initial editorial screening more quickly. Please review each section before submission."
       />
 

@@ -30,7 +30,7 @@ function ArchivesPage() {
     <>
       <PageHero
         eyebrow="Archives"
-        title="Every issue, since Volume 1."
+        title="Every Issue, Since Volume 1."
         description="Browse past issues of the Ramotitanico Journal of Education, Research & Sustainable Innovation."
       />
 
