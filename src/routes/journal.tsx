@@ -134,7 +134,7 @@ function JournalPage() {
     <>
       <PageHero
         eyebrow="Journal Services"
-        title="Publication support for researchers who deserve to be read."
+        title="Academia Humanities Review"
         description="From first draft to indexed publication, our editorial specialists help scholars navigate the path to credible, discoverable, and properly attributed academic work."
       />
 
