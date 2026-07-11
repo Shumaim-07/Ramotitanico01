@@ -315,7 +315,7 @@ function HomePage() {
               Featured Conference · 26-27 September 2026
             </span>
             <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-              Crisi500+ Delegatess and Humanities: Paradigm Shift in Language & Literacher in 21st Century
+              Crisis Delegatess and Humanities: Paradigm Shift in Language & Literature in 21st Century
             </h2>
             <p className="mt-4 max-w-xl text-primary-foreground/80">
               Braga hosts the 2026 edition of our flagship interdisciplinary conference. Scholars,

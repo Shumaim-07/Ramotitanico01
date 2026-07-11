@@ -10,9 +10,15 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Ramotitanico" },
-      { name: "description", content: "Reach Ramotitanico's Braga office, partnerships team, and consultant network." },
+      {
+        name: "description",
+        content: "Reach Ramotitanico's Braga office, partnerships team, and consultant network.",
+      },
       { property: "og:title", content: "Contact — Ramotitanico" },
-      { property: "og:description", content: "Email, phone, and contact form for Ramotitanico in Braga, Portugal." },
+      {
+        property: "og:description",
+        content: "Email, phone, and contact form for Ramotitanico in Braga, Portugal.",
+      },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -60,10 +66,20 @@ function ContactPage() {
           <div>
             <SectionTitle eyebrow="Head Office" title="Braga, Portugal" />
             <ul className="mt-8 space-y-5 text-sm">
-              <Item icon={MapPin} label="Address" value="Head Office — Braga, Portugal" />
-              <Item icon={Mail} label="Email" value="info@ramotitanico.com" href="mailto:info@ramotitanico.com" />
-              <Item icon={Phone} label="Phone" value="+351 000 000 000" href="tel:+351000000000" />
-              <Item icon={MessageCircle} label="WhatsApp" value="+351 000 000 000" />
+              <Item
+                icon={MapPin}
+                label="Address"
+                value="Head Office — Travessa da Guarda, N31
+4730-610"
+              />
+              <Item
+                icon={Mail}
+                label="Email"
+                value="info@ramotitanico.pt"
+                href="mailto:info@ramotitanico.pt"
+              />
+              <Item icon={Phone} label="Phone" value="+351 9288 310 629" href="tel:+351000000000" />
+              <Item icon={MessageCircle} label="WhatsApp" value="+351 9288 310 629" />
             </ul>
 
             <div className="mt-10">
@@ -90,7 +106,9 @@ function ContactPage() {
             className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
           >
             <h3 className="font-display text-2xl font-semibold text-primary">Send a message</h3>
-            <p className="mt-1 text-sm text-muted-foreground">We respond within three business days.</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              We respond within three business days.
+            </p>
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <Field label="Your Name" name="name" />
               <Field label="Email" name="email" type="email" />
@@ -123,21 +141,35 @@ function ContactPage() {
   );
 }
 
-function Item({ icon: Icon, label, value, href }: { icon: typeof Mail; label: string; value: string; href?: string }) {
+function Item({
+  icon: Icon,
+  label,
+  value,
+  href,
+}: {
+  icon: typeof Mail;
+  label: string;
+  value: string;
+  href?: string;
+}) {
   const inner = (
     <div className="flex items-start gap-4">
       <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-accent-soft text-accent-foreground">
         <Icon className="h-5 w-5" />
       </span>
       <div className="min-w-0">
-        <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{label}</div>
+        <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          {label}
+        </div>
         <div className="mt-0.5 break-words text-base text-foreground">{value}</div>
       </div>
     </div>
   );
   return href ? (
     <li>
-      <a href={href} className="block transition-opacity hover:opacity-80">{inner}</a>
+      <a href={href} className="block transition-opacity hover:opacity-80">
+        {inner}
+      </a>
     </li>
   ) : (
     <li>{inner}</li>
@@ -147,7 +179,9 @@ function Item({ icon: Icon, label, value, href }: { icon: typeof Mail; label: st
 function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
   return (
     <div>
-      <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{label}</label>
+      <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+        {label}
+      </label>
       <input
         name={name}
         type={type}
