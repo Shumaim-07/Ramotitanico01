@@ -206,7 +206,7 @@ function HomePage() {
           <div>
             <SectionTitle
   eyebrow="About Ramotitanico"
-  title="Four sectors, one organisation rooted in Braga."
+  title="Four Sectors, One Organisation Rooted in Braga."
   description="From our headquarters in Braga, we operate across education, construction, transport, and agriculture — each sector contributing to Portugal's development and our global mission. We connect scholars across continents, build lasting infrastructure, put people in motion, and cultivate sustainable food systems."
   className="[&_p]:text-justify [&_p]:[text-align-last:justify]"
 />
@@ -240,7 +240,7 @@ function HomePage() {
           <SectionTitle
             align="center"
             eyebrow="What We Do"
-            title="Services that strengthen institutions and scholars."
+            title="Services that Strengthen Institutions and Scholars."
             description="Six interconnected practice areas, delivered with academic rigour and operational discipline."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -273,7 +273,7 @@ function HomePage() {
         <SectionTitle
           align="center"
           eyebrow="Our Sectors"
-          title="Beyond academia — three more pillars of growth."
+          title="Beyond Academia — Three More Pillars of Growth."
           description="Alongside education, Ramotitanico drives sustainable development through construction, a peer-to-peer car rental marketplace, and agricultural consultancy."
         />
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
@@ -340,8 +340,8 @@ function HomePage() {
           <div className="grid grid-cols-2 gap-4 text-sm">
             {[
               { icon: Users, label: "500+ Delegates" },
-              { icon: Globe, label: "40+ Countries" },
-              { icon: Microscope, label: "200+ Papers" },
+              { icon: Globe, label: "6+ Countries" },
+              { icon: Microscope, label: "50+ Papers" },
               { icon: BookOpen, label: "Indexed Proceedings" },
             ].map((b) => (
               <div
@@ -361,7 +361,7 @@ function HomePage() {
         <SectionTitle
           align="center"
           eyebrow="Voices from Our Network"
-          title="Trusted by scholars across continents."
+          title="Trusted by Scholars Across Continents."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {testimonials.map((t) => (

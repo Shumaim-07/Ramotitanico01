@@ -51,7 +51,7 @@ function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="We would be glad to hear from you."
+        title="We Would be Glad to Hear From You."
         description="For partnerships, conference enquiries, consultancy, or media — reach our Braga office through the channels below."
       />
 

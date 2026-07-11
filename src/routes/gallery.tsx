@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { X } from "lucide-react";
+import { ArrowLeft, Folder, X } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 
 export const Route = createFileRoute("/gallery")({
@@ -35,60 +35,98 @@ const items: Item[] = [
   { category: "Certificates", caption: "Closing certificates", src: "https://images.unsplash.com/photo-1559223607-a43c990c692c?w=1200&q=80" },
 ];
 
-const categories = ["All", "Conferences", "Workshops", "Cultural", "Certificates"] as const;
+const folders = ["Conferences", "Workshops", "Cultural", "Certificates"] as const;
 
 function GalleryPage() {
-  const [active, setActive] = useState<(typeof categories)[number]>("All");
+  const [openFolder, setOpenFolder] = useState<(typeof folders)[number] | null>(null);
   const [lightbox, setLightbox] = useState<Item | null>(null);
 
-  const filtered = active === "All" ? items : items.filter((i) => i.category === active);
+  const photosInFolder = openFolder ? items.filter((i) => i.category === openFolder) : [];
 
   return (
     <>
       <PageHero
         eyebrow="Gallery"
         title="Moments from our programmes."
-        description="A visual record of conferences, workshops, cultural exchanges, and certificate ceremonies."
+        description="A visual record of conferences, workshops, cultural exchanges, and certificate ceremonies — organised into folders."
       />
 
       <section className="container-page py-20">
-        <div className="flex flex-wrap gap-2">
-          {categories.map((c) => (
+        {!openFolder ? (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {folders.map((f) => {
+              const folderItems = items.filter((i) => i.category === f);
+              const cover = folderItems[0];
+              return (
+                <button
+                  key={f}
+                  onClick={() => setOpenFolder(f)}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-card text-left shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
+                  style={{ aspectRatio: "4/3" }}
+                >
+                  {cover && (
+                    <img
+                      src={cover.src}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 p-4">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-accent text-accent-foreground">
+                      <Folder className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <div className="font-display text-base font-semibold text-primary-foreground">{f}</div>
+                      <div className="text-xs text-primary-foreground/70">
+                        {folderItems.length} photo{folderItems.length !== 1 ? "s" : ""}
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        ) : (
+          <>
             <button
-              key={c}
-              onClick={() => setActive(c)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                active === c
-                  ? "bg-primary text-primary-foreground"
-                  : "border border-border bg-background text-foreground/70 hover:bg-secondary"
-              }`}
+              onClick={() => setOpenFolder(null)}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all hover:gap-3"
             >
-              {c}
+              <ArrowLeft className="h-4 w-4" /> Back to folders
             </button>
-          ))}
-        </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((it, i) => (
-            <button
-              key={it.src}
-              onClick={() => setLightbox(it)}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card text-left shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elevated)]"
-              style={{ aspectRatio: i % 5 === 0 ? "4/5" : "4/3" }}
-            >
-              <img
-                src={it.src}
-                alt={it.caption}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 to-transparent p-4">
-                <div className="text-[10px] font-semibold uppercase tracking-wider text-accent">{it.category}</div>
-                <div className="mt-0.5 text-sm font-medium text-primary-foreground">{it.caption}</div>
-              </div>
-            </button>
-          ))}
-        </div>
+            <div className="mt-6 flex items-center gap-3">
+              <span className="grid h-11 w-11 place-items-center rounded-lg bg-primary text-primary-foreground">
+                <Folder className="h-5 w-5" />
+              </span>
+              <h2 className="font-display text-2xl font-semibold text-primary">{openFolder}</h2>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {photosInFolder.map((it, i) => (
+                <button
+                  key={it.src}
+                  onClick={() => setLightbox(it)}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-card text-left shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elevated)]"
+                  style={{ aspectRatio: i % 5 === 0 ? "4/5" : "4/3" }}
+                >
+                  <img
+                    src={it.src}
+                    alt={it.caption}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 to-transparent p-4">
+                    <div className="text-[10px] font-semibold uppercase tracking-wider text-accent">{it.category}</div>
+                    <div className="mt-0.5 text-sm font-medium text-primary-foreground">{it.caption}</div>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </>
+        )}
       </section>
 
       {lightbox && (

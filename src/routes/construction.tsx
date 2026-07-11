@@ -62,7 +62,7 @@ function ConstructionPage() {
       <section className="container-page py-20">
         <SectionTitle
           eyebrow="What We Deliver"
-          title="Six construction capabilities. One integrated team."
+          title="Six Construction Capabilities. One Integrated Team."
           description="Our engineers, sustainability specialists, and project managers work together across every project phase — from feasibility through to handover — on public and private sector schemes across Portugal."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -91,7 +91,7 @@ function ConstructionPage() {
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Buildings and infrastructure that serve communities for generations.
+            Buildings and Infrastructure that Serve Communities for Generations.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>

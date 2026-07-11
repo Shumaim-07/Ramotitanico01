@@ -63,14 +63,14 @@ function ConsultantPage() {
     <>
       <PageHero
         eyebrow="Become a Consultant"
-        title="Bring your expertise to a global academic platform."
+        title="Bring your Expertise to a Global Academic Platform."
         description="Ramotitanico engages consultants across education, research, publishing, and institutional development. Apply to join our international network."
       />
 
       <section className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <SectionTitle eyebrow="Why Join" title="Benefits of working with us." />
+            <SectionTitle eyebrow="Why Join" title="Benefits of Working With Us." />
             <ul className="mt-8 space-y-5">
               {benefits.map((b) => (
                 <li key={b.title} className="flex gap-4">
@@ -109,7 +109,7 @@ function ConsultantPage() {
           <SectionTitle
             align="center"
             eyebrow="Application"
-            title="Apply to the consultant network."
+            title="Apply to the Consultant Network."
             description="Tell us about your background and the areas where you would like to contribute."
           />
           <form

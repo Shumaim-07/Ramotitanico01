@@ -32,14 +32,14 @@ function AboutPage() {
     <>
       <PageHero
         eyebrow="About Ramotitanico"
-        title="Education, construction, transport, and agriculture — built from Braga."
+        title="Education, Construction, Transport, and Agriculture — Built from Braga."
         description="We are a multidisciplinary organisation operating across four sectors, connecting scholars, building infrastructure, enabling mobility, and cultivating sustainable agriculture from our base in Portugal."
       />
 
       <section className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div className="space-y-5 text-foreground/85">
-            <SectionTitle eyebrow="Who We Are" title="A Portugal-based multidisciplinary organisation." />
+            <SectionTitle eyebrow="Who We Are" title="A Portugal-Based Multidisciplinary Organisation." />
             <p className="text-lg leading-relaxed">
               Ramotitanico operates from Braga across four interconnected sectors: education,
               construction, transport, and agriculture. We advance research and learning through
@@ -72,7 +72,7 @@ function AboutPage() {
               <span className="rounded-full bg-accent-soft px-3 py-1 text-accent-foreground">Our Vision</span>
             </span>
             <h3 className="mt-4 font-display text-2xl font-semibold text-primary">
-              A connected scholarly world that serves society.
+              A Connected Scholarly World that Serves Society.
             </h3>
             <p className="mt-3 leading-relaxed text-foreground/80">
               We envision an international academic ecosystem in which knowledge moves freely
@@ -85,7 +85,7 @@ function AboutPage() {
               <span className="rounded-full bg-accent-soft px-3 py-1 text-accent-foreground">Our Mission</span>
             </span>
             <h3 className="mt-4 font-display text-2xl font-semibold text-primary">
-              Build systems — academic, physical, and social — that create lasting value.
+              Build Systems — Academic, Physical, and Social — that Create Lasting Value.
             </h3>
             <p className="mt-3 leading-relaxed text-foreground/80">
               We design and operate conferences, publications, training programmes, construction
@@ -100,7 +100,7 @@ function AboutPage() {
         <SectionTitle
           align="center"
           eyebrow="Core Values"
-          title="The principles that guide every programme."
+          title="The Principles that Guide Every Programe."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((v) => (
@@ -121,7 +121,7 @@ function AboutPage() {
             Global Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            From a Braga office to four sectors, forty countries.
+            From a Braga Office to Four Sectors, Forty Countries.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>

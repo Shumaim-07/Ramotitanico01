@@ -169,7 +169,7 @@ function JournalPage() {
         <section className="container-page py-20">
           <SectionTitle
             eyebrow="Journal Resources"
-            title="Everything an author needs, in one place."
+            title="Everything an Author Needs, in One Place."
             description="Policies, guidelines, and current scholarship — organised for authors, reviewers, and readers of the journal."
           />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -202,7 +202,7 @@ function JournalPage() {
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Eighty-five publications and counting.
+            Eighty-five Publications and Counting.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>

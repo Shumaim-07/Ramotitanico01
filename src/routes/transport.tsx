@@ -68,7 +68,7 @@ function TransportPage() {
       <section className="container-page py-20">
         <SectionTitle
           eyebrow="What We Offer"
-          title="Everything you need to rent or earn."
+          title="Everything You Need to Rent or Earn."
           description="Whether you're looking for a vehicle across Portugal or want to put your parked car to work, our platform connects both sides simply and safely."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -98,7 +98,7 @@ function TransportPage() {
               For Car Owners
             </span>
             <h2 className="mt-5 font-display text-3xl font-semibold text-primary">
-              Your car earns while you don't drive it.
+              Your Car Earns While You Don't Drive it.
             </h2>
             <p className="mt-4 leading-relaxed text-foreground/80">
               Registering your vehicle takes minutes. We verify the car, manage bookings, coordinate
@@ -124,7 +124,7 @@ function TransportPage() {
               For Renters
             </span>
             <h2 className="mt-5 font-display text-3xl font-semibold text-primary">
-              The right car, wherever you are in Portugal.
+              The Right Car, Wherever You Are in Portugal.
             </h2>
             <p className="mt-4 leading-relaxed text-foreground/80">
               Browse our fleet and owner-listed vehicles by location, date, and category. Compare
@@ -154,7 +154,7 @@ function TransportPage() {
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Mobility that works for both sides of the market.
+            Mobility that Works For Both Sides of the Market.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>

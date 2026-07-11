@@ -66,7 +66,7 @@ function AgriculturePage() {
       <section className="container-page py-20">
         <SectionTitle
           eyebrow="What We Offer"
-          title="Six agriculture services. Rooted in real-world practice."
+          title="Six Agriculture Services. Rooted in Real-World Practice."
           description="Each service is delivered by agronomists, policy specialists, and business advisors with experience across diverse agroecological zones, farming systems, and market contexts."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -95,7 +95,7 @@ function AgriculturePage() {
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Agriculture that nourishes people and protects the planet.
+            Agriculture that Nourishes People and Protects the Planet.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>

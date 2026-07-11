@@ -1,5 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Award, CalendarCheck, FileCheck2, FileText, Globe, Mic2, Network, Send } from "lucide-react";
+import {
+  Award,
+  CalendarCheck,
+  FileCheck2,
+  FileText,
+  Globe,
+  Mic2,
+  Network,
+  CalendarClock,
+  Send,
+} from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
 import {
@@ -15,9 +25,17 @@ export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
       { title: "Events & Conferences — Ramotitanico" },
-      { name: "description", content: "Featured international conference, call for papers, and a worldwide programme of scholarly events." },
+      {
+        name: "description",
+        content:
+          "Featured international conference, call for papers, and a worldwide programme of scholarly events.",
+      },
       { property: "og:title", content: "Events & Conferences — Ramotitanico" },
-      { property: "og:description", content: "International Conference on Education, Research & Sustainable Innovation — 27–28 June 2026." },
+      {
+        property: "og:description",
+        content:
+          "International Conference on Education, Research & Sustainable Innovation — 27–28 June 2026.",
+      },
       { property: "og:url", content: "/events" },
     ],
     links: [{ rel: "canonical", href: "/events" }],
@@ -46,17 +64,41 @@ export const Route = createFileRoute("/events")({
 });
 
 const timeline = [
-  { date: "15 February 2026", title: "Abstract Submission Opens", desc: "Authors submit 300-word abstracts via the conference portal.", icon: Send },
-  { date: "30 March 2026", title: "Acceptance Notifications", desc: "Programme committee returns peer-reviewed decisions with feedback.", icon: FileCheck2 },
-  { date: "15 May 2026", title: "Full Paper Submission", desc: "Accepted contributors submit camera-ready full papers for proceedings.", icon: FileText },
-  { date: "27–28 June 2026", title: "Conference in Braga", desc: "Two days of plenaries, parallel panels, and networking sessions.", icon: CalendarCheck },
+  {
+    date: "27–28 June 2026",
+    title: "Online & hybrid",
+    desc: "Two days of scholarly presentations, discussions, and networking.",
+    icon: CalendarCheck,
+  },
+  {
+    date: "26-27  September 2026",
+    title: "Online, hybrid & physical mode",
+    desc: "Presentation of accepted papers and participation in the conference across all modes.",
+    icon: CalendarClock,
+  },
 ];
 
 const benefits = [
-  { icon: Award, title: "Official Certificates", desc: "Participation and presentation certificates issued by Ramotitanico." },
-  { icon: FileText, title: "Publication Opportunity", desc: "Selected papers published in indexed proceedings and edited volumes." },
-  { icon: Network, title: "International Networking", desc: "Curated sessions with scholars and practitioners from 40+ countries." },
-  { icon: Globe, title: "Global Exposure", desc: "Profile, abstract, and affiliation listed in the official conference programme." },
+  {
+    icon: Award,
+    title: "Official Certificates",
+    desc: "Participation and presentation certificates issued by Ramotitanico.",
+  },
+  {
+    icon: FileText,
+    title: "Publication Opportunity",
+    desc: "Selected papers published in indexed proceedings and edited volumes.",
+  },
+  {
+    icon: Network,
+    title: "International Networking",
+    desc: "Curated sessions with scholars and practitioners from 40+ countries.",
+  },
+  {
+    icon: Globe,
+    title: "Global Exposure",
+    desc: "Profile, abstract, and affiliation listed in the official conference programme.",
+  },
 ];
 
 function EventsPage() {
@@ -64,7 +106,7 @@ function EventsPage() {
     <>
       <PageHero
         eyebrow="Events & Conferences"
-        title="A worldwide programme of scholarly gatherings."
+        title="A Worldwide Programme of Scholarly Gatherings."
         description="From flagship international conferences in Braga to regional symposia and executive seminars across our partner network."
       />
 
@@ -77,13 +119,13 @@ function EventsPage() {
                 Flagship · 27–28 June 2026 · Braga
               </span>
               <h2 className="mt-5 font-display text-3xl font-semibold leading-tight sm:text-4xl">
-                International Conference on Education, Research & Sustainable Innovation
+                Humanities Beyond Borders: Culture, Identity and Global Dialogues
               </h2>
               <p className="mt-4 text-primary-foreground/80">
                 Two days of plenary lectures, parallel panels, doctoral colloquia, and policy
                 roundtables — convening scholars, educators, and decision-makers from across
-                continents to interrogate the most pressing questions in contemporary education
-                and research.
+                continents to interrogate the most pressing questions in contemporary education and
+                research.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Dialog>
@@ -126,14 +168,16 @@ function EventsPage() {
             </div>
             <div className="grid grid-cols-2 gap-px bg-primary-foreground/15">
               {[
-                { k: "500+", v: "Delegates" },
-                { k: "40+", v: "Countries" },
-                { k: "200+", v: "Papers" },
+                { k: "70+", v: "Participants" },
+                { k: "6+", v: "Countries" },
+                { k: "50+", v: "Papers" },
                 { k: "8", v: "Plenaries" },
               ].map((s) => (
                 <div key={s.v} className="flex flex-col items-center justify-center bg-primary p-8">
                   <span className="font-display text-3xl font-semibold text-accent">{s.k}</span>
-                  <span className="mt-2 text-xs uppercase tracking-wider text-primary-foreground/70">{s.v}</span>
+                  <span className="mt-2 text-xs uppercase tracking-wider text-primary-foreground/70">
+                    {s.v}
+                  </span>
                 </div>
               ))}
             </div>
@@ -146,7 +190,7 @@ function EventsPage() {
         <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <SectionTitle
             eyebrow="Call for Papers"
-            title="Submit your contribution."
+            title="Submit Your Contribution."
             description="We welcome original research, case studies, policy analyses, and theoretical contributions across education, research methodology, innovation studies, and sustainable development."
           />
           <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
@@ -158,9 +202,21 @@ function EventsPage() {
                 "Sustainability in Curricula",
                 "Digital Pedagogy & AI",
                 "Comparative Education Policy",
-                "Equity, Access & Inclusion",
-                "Innovation in Doctoral Training",
                 "Cross-cultural Collaboration",
+                "Postcolonial Studies",
+                "Cultural Memory and Identity",
+                "Migration and Diaspora",
+                "Gender and Feminist Studies",
+                "Digital Humanities",
+                "Comparative Literature",
+                "Globalization and Culture",
+                "Language, Power and Representation",
+                "Cultural Contact Zone",
+                "Education in 2026",
+                "TESOL",
+                "Linguistics",
+                "New World Order, Bipolar and Unipolarity in Literature",
+                "War Literature, Identity and Economy in 2026",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2">
                   <Mic2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
@@ -174,7 +230,7 @@ function EventsPage() {
 
       {/* Timeline */}
       <section id="timeline" className="container-page py-20">
-        <SectionTitle align="center" eyebrow="Conference Timeline" title="Key dates for 2026." />
+        <SectionTitle align="center" eyebrow="Conference Timeline" title="Key Dates for 2026." />
         <div className="mx-auto mt-14 max-w-3xl">
           <ol className="relative border-l-2 border-accent/40 pl-6">
             {timeline.map((t) => (
@@ -196,10 +252,13 @@ function EventsPage() {
       {/* Benefits */}
       <section className="bg-surface py-20">
         <div className="container-page">
-          <SectionTitle align="center" eyebrow="Why Attend" title="What participants gain." />
+          <SectionTitle align="center" eyebrow="Why Attend" title="What Participants Gain." />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map((b) => (
-              <div key={b.title} className="rounded-2xl border border-border bg-card p-7 text-center shadow-[var(--shadow-card)]">
+              <div
+                key={b.title}
+                className="rounded-2xl border border-border bg-card p-7 text-center shadow-[var(--shadow-card)]"
+              >
                 <span className="mx-auto grid h-12 w-12 place-items-center rounded-lg bg-accent-soft text-accent-foreground">
                   <b.icon className="h-6 w-6" />
                 </span>

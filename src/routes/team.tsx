@@ -87,7 +87,7 @@ function TeamPage() {
     <>
       <PageHero
         eyebrow="Our Team"
-        title="Scholars and practitioners advancing a shared mission."
+        title="Scholars and Practitioners Advancing a Shared Mission."
         description="Ramotitanico is led by an experienced director, supported by a distinguished advisory board, a working conference committee, and regional representatives across continents."
       />
 

@@ -1,8 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { GraduationCap, BookOpen, Monitor, Award, Users2, Globe2 } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
-
+import {  Link } from "@tanstack/react-router";
+import {
+  ArrowRight,
+  BookOpen,
+  Building2,
+  Calendar,
+  Car,
+  Compass,
+  GraduationCap,
+  Globe,
+  Handshake,
+  Leaf,
+  Microscope,
+  Quote,
+  Star,
+  Users,
+} from "lucide-react";
 export const Route = createFileRoute("/education")({
   head: () => ({
     meta: [
@@ -20,33 +35,33 @@ export const Route = createFileRoute("/education")({
 const services = [
   {
     icon: GraduationCap,
-    title: "Curriculum Design & Review",
-    desc: "Evidence-based curriculum development and programme review for schools, universities, and training institutions. We align learning frameworks with international standards and sector-specific competency models.",
+    title: "Educational Consultancy",
+    desc: "Strategic advisory for universities, ministries, and institutions modernising curricula and academic governance.",
   },
   {
-    icon: Users2,
-    title: "Teacher Professional Development",
-    desc: "Structured capacity-building programmes for educators at all levels. Our workshops, coaching cycles, and certified short courses strengthen pedagogical practice, classroom leadership, and subject mastery.",
-  },
-  {
-    icon: Monitor,
-    title: "E-Learning & EdTech Integration",
-    desc: "Strategic advisory on digital transformation in education. We guide institutions through LMS selection, blended learning design, and the integration of interactive technologies that enhance student outcomes.",
+    icon: Calendar,
+    title: "Conference & Event Management",
+    desc: "End-to-end orchestration of international academic conferences, symposia, and policy roundtables.",
   },
   {
     icon: BookOpen,
-    title: "Educational Policy Advisory",
-    desc: "Policy analysis, reform planning, and legislative consultation for ministries and education authorities. Our advisors draw on comparative international research to support evidence-led decision-making.",
+    title: "Research & Publication Support",
+    desc: "Methodological guidance, editorial review, indexing and dissemination across reputable academic channels.",
   },
   {
-    icon: Award,
-    title: "Institutional Accreditation Support",
-    desc: "End-to-end guidance through national and international accreditation processes. We prepare documentation, conduct internal audits, train quality assurance committees, and liaise with accrediting bodies.",
+    icon: Compass,
+    title: "Professional Training",
+    desc: "Certified programmes for educators, researchers, and administrators across emerging and established disciplines.",
   },
   {
-    icon: Globe2,
-    title: "Student Exchange & Mobility Programs",
-    desc: "Design and administration of bilateral and multilateral student mobility frameworks. We build structured partnerships that deliver measurable academic, cultural, and professional outcomes for participants.",
+    icon: Globe,
+    title: "Academic Exchange",
+    desc: "Bilateral cultural and academic mobility frameworks connecting institutions across continents.",
+  },
+  {
+    icon: Handshake,
+    title: "International Collaboration",
+    desc: "Partnership facilitation between universities, NGOs, research centres, and policy bodies worldwide.",
   },
 ];
 
@@ -55,33 +70,39 @@ function EducationPage() {
     <>
       <PageHero
         eyebrow="Education Services"
-        title="Strengthening education systems from classroom to policy."
+        title="Strengthening Education Systems from Classroom to Policy."
         description="Our education specialists partner with institutions, governments, and educators to design programmes that raise standards, widen access, and build lasting capacity."
       />
-
-      <section className="container-page py-20">
-        <SectionTitle
-          eyebrow="What We Offer"
-          title="Six education services. One commitment to excellence."
-          description="Each service is delivered by practitioners with direct experience in education reform, institutional management, and international academic cooperation."
-        />
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {services.map((s) => (
-            <article
-              key={s.title}
-              className="group rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
-            >
-              <div className="flex items-start gap-5">
-                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                  <s.icon className="h-7 w-7" />
+<section className="bg-surface py-20 sm:py-28">
+        <div className="container-page">
+          <SectionTitle
+            align="center"
+            eyebrow="What We Do"
+            title="Services that Strengthen Institutions and Scholars."
+            description="Six interconnected practice areas, delivered with academic rigour and operational discipline."
+          />
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => (
+              <div
+                key={s.title}
+                className="group rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
+              >
+                <span className="grid h-12 w-12 place-items-center rounded-lg bg-primary text-primary-foreground transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                  <s.icon className="h-6 w-6" />
                 </span>
-                <div className="min-w-0">
-                  <h3 className="font-display text-xl font-semibold text-primary">{s.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                </div>
+                <h3 className="mt-5 font-display text-xl font-semibold text-primary">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               </div>
-            </article>
-          ))}
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 rounded-md border border-primary bg-background px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              View all services <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -91,7 +112,7 @@ function EducationPage() {
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Education that travels across borders and generations.
+            Education that Travels Across Borders and Generations.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>
