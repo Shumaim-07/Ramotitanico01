@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
+import emailjs from "@emailjs/browser";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -47,10 +48,27 @@ function ContactPage() {
       setSubmitting(false);
       return;
     }
-    await new Promise((r) => setTimeout(r, 500));
-    toast.success("Message sent. We will respond within three business days.");
-    form.reset();
-    setSubmitting(false);
+    try {
+  await emailjs.send(
+    "service_qthg43o",
+    "template_f12z8bz",
+    {
+      name: parsed.data.name,
+      email: parsed.data.email,
+      subject: parsed.data.subject,
+      message: parsed.data.message,
+    },
+    "vG4fkK7m6NkMhq2-1"
+  );
+
+  toast.success("Message sent successfully!");
+  form.reset();
+} catch (error) {
+  console.error(error);
+  toast.error("Failed to send message.");
+}
+
+setSubmitting(false);
   };
 
   return (
