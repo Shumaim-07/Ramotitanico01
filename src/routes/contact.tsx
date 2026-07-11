@@ -50,15 +50,15 @@ function ContactPage() {
     }
     try {
   await emailjs.send(
-    "service_qthg43o",
-    "template_f12z8bz",
+    "service_jp0tlbk",
+    "template_2z0htha",
     {
       name: parsed.data.name,
       email: parsed.data.email,
       subject: parsed.data.subject,
       message: parsed.data.message,
     },
-    "vG4fkK7m6NkMhq2-1"
+    "HhAU4iWFJNLELPwv3"
   );
 
   toast.success("Message sent successfully!");
