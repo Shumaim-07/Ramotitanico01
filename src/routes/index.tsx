@@ -312,10 +312,10 @@ function HomePage() {
         <div className="container-page grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
           <div>
             <span className="inline-block rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              Featured Conference · 27–28 June 2026
+              Featured Conference · 26-27 September 2026
             </span>
             <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-              International Conference on Education, Research & Sustainable Innovation
+              Crisi500+ Delegatess and Humanities: Paradigm Shift in Language & Literacher in 21st Century
             </h2>
             <p className="mt-4 max-w-xl text-primary-foreground/80">
               Braga hosts the 2026 edition of our flagship interdisciplinary conference. Scholars,
@@ -327,7 +327,7 @@ function HomePage() {
                 to="/events"
                 className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground hover:brightness-95"
               >
-                View conference <ArrowRight className="h-4 w-4" />
+                View conferences <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/events"
@@ -339,9 +339,9 @@ function HomePage() {
           </div>
           <div className="grid grid-cols-2 gap-4 text-sm">
             {[
-              { icon: Users, label: "500+ Delegates" },
-              { icon: Globe, label: "6+ Countries" },
-              { icon: Microscope, label: "50+ Papers" },
+              { icon: Users, label: "International Community" },
+              { icon: Globe, label: "Worldwide Network" },
+              { icon: Microscope, label: "Innovative Research" },
               { icon: BookOpen, label: "Indexed Proceedings" },
             ].map((b) => (
               <div
