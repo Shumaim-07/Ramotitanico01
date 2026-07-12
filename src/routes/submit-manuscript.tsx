@@ -28,6 +28,8 @@ function SubmitManuscriptPage() {
   return (
     <>
       <PageHero
+        backTo="/journal"
+        backLabel="Journal Services"
         eyebrow="Submit Manuscript"
         title="Ready to Submit? Here's How."
         description="Manuscripts are submitted directly to the editorial office by email. Please review the requirements below before sending your submission."

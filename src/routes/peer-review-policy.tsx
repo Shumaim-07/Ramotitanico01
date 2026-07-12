@@ -70,6 +70,8 @@ function PeerReviewPage() {
   return (
     <>
       <PageHero
+        backTo="/journal"
+        backLabel="Journal Services"
         eyebrow="Peer Review Policy"
         title="Rigorous, Double-Blind, and Transparent"
         description="Every submission that passes initial screening undergoes double-blind peer review by at least two independent experts in the relevant field."

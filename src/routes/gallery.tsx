@@ -51,17 +51,9 @@ const items: Item[] = [
     caption: `Online Conference, 26–27 June 2026 — photo ${i + 1}`,
     src,
   })),
-  { category: "Conferences", caption: "Plenary session, Braga 2025", src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80" },
-  { category: "Conferences", caption: "Keynote address", src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&q=80" },
-  { category: "Workshops", caption: "Research methods workshop", src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" },
-  { category: "Workshops", caption: "Doctoral training session", src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80" },
-  { category: "Cultural", caption: "Cultural exchange evening", src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80" },
-  { category: "Cultural", caption: "Networking reception", src: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1200&q=80" },
-  { category: "Certificates", caption: "Award ceremony, 2024", src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1200&q=80" },
-  { category: "Certificates", caption: "Closing certificates", src: "https://images.unsplash.com/photo-1559223607-a43c990c692c?w=1200&q=80" },
 ];
 
-const folders = [onlineConferenceFolder, "Conferences", "Workshops", "Cultural", "Certificates"] as const;
+const folders = [onlineConferenceFolder] as const;
 
 function GalleryPage() {
   const [openFolder, setOpenFolder] = useState<(typeof folders)[number] | null>(null);

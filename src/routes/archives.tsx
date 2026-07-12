@@ -29,6 +29,8 @@ function ArchivesPage() {
   return (
     <>
       <PageHero
+        backTo="/journal"
+        backLabel="Journal Services"
         eyebrow="Archives"
         title="Every Issue, Since Volume 1."
         description="Browse past issues of the Ramotitanico Journal of Education, Research & Sustainable Innovation."

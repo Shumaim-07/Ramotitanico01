@@ -31,6 +31,8 @@ function AboutJournalPage() {
   return (
     <>
       <PageHero
+        backTo="/journal"
+        backLabel="Journal Services"
         eyebrow="About the Journal"
         title="Academia Humanities Review."
         description="An open-access, peer-reviewed journal dedicated to advancing scholarship in the humanities — publishing original research, critical essays, and interdisciplinary studies."

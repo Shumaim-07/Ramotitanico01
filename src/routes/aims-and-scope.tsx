@@ -59,6 +59,8 @@ function AimsScopePage() {
   return (
     <>
       <PageHero
+        backTo="/journal"
+        backLabel="Journal Services"
         eyebrow="Aims and Scope"
         title="Academia Humanities Review"
         description="International · Peer-Reviewed · Open Access"
