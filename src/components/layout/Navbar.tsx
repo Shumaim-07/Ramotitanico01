@@ -46,18 +46,18 @@ export function Navbar() {
           : "bg-background/60 backdrop-blur-sm",
       )}
     >
-      <div className="container-page flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="flex min-w-0 items-center gap-2.5 shrink-0">
+      <div className="w-full grid grid-cols-[1fr_auto_1fr] items-center gap-4 p-2">
+        <Link to="/" className="col-start-1 flex min-w-0 items-center gap-2.5 justify-self-start">
           <span className="flex min-w-0 flex-col leading-tight">
-            <img 
-              src={logo} 
-              alt="Ramotitanico" 
-              className="h-16 w-auto object-contain mix-blend-multiply" 
+            <img
+              src={logo}
+              alt="Ramotitanico"
+              className="h-25 w-auto object-contain mix-blend-multiply"
             />
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="col-start-2 hidden items-center gap-1 justify-self-center lg:flex">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -93,17 +93,17 @@ export function Navbar() {
           </div>
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="col-start-3 hidden items-center gap-2 justify-self-end lg:flex">
           <Link
             to="/become-a-consultant"
-            className="inline-flex items-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:brightness-95"
+            className="inline-flex items-center rounded-md bg-accent px-4 py-4 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:brightness-95"
           >
             Become a Consultant
           </Link>
           <LanguageToggle />
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="col-start-3 flex items-center gap-2 justify-self-end lg:hidden">
           <LanguageToggle />
           <button
             onClick={() => setOpen((v) => !v)}
@@ -173,25 +173,7 @@ export function Navbar() {
               Become a Consultant
             </Link>
 
-            {/* Journal links: flat list, matching the desktop sub-nav */}
-            <div className="mt-3 border-t border-border pt-3">
-              <p className="px-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Journal
-              </p>
-              <div className="mt-1 flex flex-col gap-0.5">
-                {journalLinks.map((j) => (
-                  <Link
-                    key={j.to}
-                    to={j.to}
-                    onClick={() => setOpen(false)}
-                    className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary"
-                    activeProps={{ className: "text-primary bg-secondary" }}
-                  >
-                    {j.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+      
           </div>
         </div>
       )}
