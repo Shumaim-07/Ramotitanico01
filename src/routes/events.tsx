@@ -66,13 +66,13 @@ export const Route = createFileRoute("/events")({
 const timeline = [
   {
     date: "27–28 June 2026",
-    title: "Online & hybrid",
+    title: "Online & Hybrid",
     desc: "Two days of scholarly presentations, discussions, and networking.",
     icon: CalendarCheck,
   },
   {
     date: "26-27  September 2026",
-    title: "Online, hybrid & physical mode",
+    title: "Online, Hybrid & Physical Mode",
     desc: "Presentation of accepted papers and participation in the conference across all modes.",
     icon: CalendarClock,
   },

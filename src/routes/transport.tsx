@@ -59,7 +59,7 @@ function TransportPage() {
   <>
     Rent a Car
     <br />
-    Or Rent Out Yours 
+    or Rent Out Yours
   </>
 }
         description="Ramotitanico operates a peer-to-peer car rental marketplace across Portugal. Rent directly from our managed fleet, or register your own vehicle and earn while it sits idle."
@@ -98,7 +98,7 @@ function TransportPage() {
               For Car Owners
             </span>
             <h2 className="mt-5 font-display text-3xl font-semibold text-primary">
-              Your Car Earns While You Don't Drive it.
+              Your Car Earns While You Don't Drive It.
             </h2>
             <p className="mt-4 leading-relaxed text-foreground/80">
               Registering your vehicle takes minutes. We verify the car, manage bookings, coordinate
@@ -154,7 +154,7 @@ function TransportPage() {
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Mobility that Works For Both Sides of the Market.
+            Mobility that Works for Both Sides of the Market.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>

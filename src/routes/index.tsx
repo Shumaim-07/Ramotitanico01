@@ -208,7 +208,7 @@ function HomePage() {
   eyebrow="About Ramotitanico"
   title="Four Sectors, One Organisation Rooted in Braga."
   description="From our headquarters in Braga, we operate across education, construction, transport, and agriculture — each sector contributing to Portugal's development and our global mission. We connect scholars across continents, build lasting infrastructure, put people in motion, and cultivate sustainable food systems."
-  className="[&_p]:text-justify [&_p]:[text-align-last:justify]"
+  className="[&_p]:text-justify"
 />
             <Link
               to="/about"

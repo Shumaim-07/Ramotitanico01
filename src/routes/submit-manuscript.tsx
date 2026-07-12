@@ -38,7 +38,7 @@ function SubmitManuscriptPage() {
           <div>
             <SectionTitle
               eyebrow="Before You Send"
-              title="Submission requirements."
+              title="Submission Requirements."
               description="Manuscripts that don't meet these requirements are returned for revision before entering editorial screening."
             />
             <ul className="mt-8 space-y-3">

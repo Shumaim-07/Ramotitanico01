@@ -53,7 +53,7 @@ function PublicationsPage() {
     <>
       <PageHero
         eyebrow="Publications"
-        title="Scholarship made discoverable."
+        title="Scholarship Made Discoverable."
         description="Proceedings, edited volumes, research reports, and an active academic newsletter — disseminated through our international publishing network."
       />
 

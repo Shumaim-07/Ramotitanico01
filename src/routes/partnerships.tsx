@@ -59,12 +59,12 @@ function PartnershipsPage() {
     <>
       <PageHero
         eyebrow="Partnerships"
-        title="Collaborate with a global academic organization."
+        title="Collaborate with a Global Academic Organization."
         description="We build long-term partnerships with institutions whose work aligns with our mission of advancing education, research, and sustainable innovation."
       />
 
       <section className="container-page py-20">
-        <SectionTitle align="center" eyebrow="Who We Partner With" title="Four pillars of collaboration." />
+        <SectionTitle align="center" eyebrow="Who We Partner With" title="Four Pillars of Collaboration." />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((c) => (
             <div key={c.title} className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)]">
@@ -82,7 +82,7 @@ function PartnershipsPage() {
         <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <SectionTitle
             eyebrow="Start a Conversation"
-            title="Propose a collaboration."
+            title="Propose a Collaboration."
             description="Tell us about your organization and how you would like to work together. Our partnerships team reviews every enquiry personally."
           />
           <form

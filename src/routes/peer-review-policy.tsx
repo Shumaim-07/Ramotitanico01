@@ -106,13 +106,13 @@ function PeerReviewPage() {
                 key={s.title}
                 className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
               >
-                <div className="flex items-center gap-3">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
-                    {i + 1}
-                  </span>
-                  <s.icon className="h-6 w-6 text-accent" />
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+                  {i + 1}
+                </span>
+                <div className="mt-4 flex items-center gap-2">
+                  <s.icon className="h-6 w-6 shrink-0 text-accent" />
+                  <h3 className="font-display text-lg font-semibold text-primary">{s.title}</h3>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-primary">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               </article>
             ))}

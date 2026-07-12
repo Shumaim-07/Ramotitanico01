@@ -75,7 +75,7 @@ setSubmitting(false);
     <>
       <PageHero
         eyebrow="Contact"
-        title="We Would be Glad to Hear From You."
+        title="We Would be Glad to Hear from You."
         description="For partnerships, conference enquiries, consultancy, or media — reach our Braga office through the channels below."
       />
 
@@ -123,7 +123,7 @@ setSubmitting(false);
             onSubmit={onSubmit}
             className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
           >
-            <h3 className="font-display text-2xl font-semibold text-primary">Send a message</h3>
+            <h3 className="font-display text-2xl font-semibold text-primary">Send a Message</h3>
             <p className="mt-1 text-sm text-muted-foreground">
               We respond within three business days.
             </p>

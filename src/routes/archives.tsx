@@ -35,7 +35,7 @@ function ArchivesPage() {
       />
 
       <section className="container-page py-20">
-        <SectionTitle eyebrow="Past Issues" title="Issue archive" />
+        <SectionTitle eyebrow="Past Issues" title="Issue Archive" />
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {issues.map((iss) => (
             <div

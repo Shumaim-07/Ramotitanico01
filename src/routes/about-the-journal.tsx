@@ -39,7 +39,7 @@ function AboutJournalPage() {
       <section className="container-page py-20">
         <SectionTitle
           eyebrow="Overview"
-          title="A platform for humanities scholarship."
+          title="A Platform for Humanities Scholarship."
           description="The Academia Humanities Review provides a rigorous, open-access forum for researchers across literature, linguistics, cultural studies, translation, and education — fostering dialogue between disciplines and across traditions."
         />
 

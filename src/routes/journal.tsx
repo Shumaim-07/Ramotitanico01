@@ -142,7 +142,7 @@ function JournalPage() {
       {/* <section className="container-page py-20">
         <SectionTitle
           eyebrow="What We Offer"
-          title="Six publication services. One goal: getting your research seen."
+          title="Six Publication Services. One Goal: Getting Your Research Seen."
           description="Each service is delivered by editorial practitioners with direct experience in academic publishing, peer review, and scholarly dissemination."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -202,7 +202,7 @@ function JournalPage() {
             Our Impact
           </span>
           <h2 className="mt-5 font-display text-3xl font-semibold sm:text-4xl">
-            Eighty-five Publications and Counting.
+            Eighty-Five Publications and Counting.
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>

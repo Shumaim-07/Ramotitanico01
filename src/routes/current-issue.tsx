@@ -35,7 +35,7 @@ function CurrentIssuePage() {
       />
 
       <section className="container-page py-20">
-        <SectionTitle eyebrow="Table of Contents" title="In this issue" />
+        <SectionTitle eyebrow="Table of Contents" title="In This Issue" />
         <div className="mt-10 divide-y divide-border rounded-2xl border border-border bg-card shadow-[var(--shadow-card)]">
           {articles.map((a) => (
             <div key={a.title} className="flex items-start gap-4 p-6">

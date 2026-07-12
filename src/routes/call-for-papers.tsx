@@ -27,10 +27,10 @@ const themes = [
 ];
 
 const timeline = [
-  { date: "1 September 2026", title: "Submissions Open", icon: Send },
-  { date: "15 November 2026", title: "Submission Deadline", icon: FileText },
-  { date: "20 January 2027", title: "Review Decisions Returned", icon: FileCheck2 },
-  { date: "March 2027", title: "Issue Published", icon: CalendarCheck },
+  { date: "Soon in 2026", title: "Submissions Open", icon: Send },
+  { date: "Soon in 2026", title: "Submission Deadline", icon: FileText },
+  { date: "Soon in 2026", title: "Review Decisions Returned", icon: FileCheck2 },
+  { date: "Soon in 2026", title: "Issue Published", icon: CalendarCheck },
 ];
 
 function CallForPapersPage() {
@@ -46,7 +46,7 @@ function CallForPapersPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           <SectionTitle
             eyebrow="Suggested Themes"
-            title="Topics we're especially interested in."
+            title="Topics We're Especially Interested In."
             description="Submissions outside these themes are also welcome, provided they fall within the journal's aims and scope."
           />
           <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
@@ -64,7 +64,7 @@ function CallForPapersPage() {
 
       <div className="bg-surface">
         <section className="container-page py-20">
-          <SectionTitle align="center" eyebrow="Key Dates" title="Timeline for the next issue." />
+          <SectionTitle align="center" eyebrow="Key Dates of" title="Call for Papers" />
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {timeline.map((t) => (
               <div key={t.title} className="flex flex-col items-center text-center">
