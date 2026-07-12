@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowLeft, Folder, X } from "lucide-react";
+import { ArrowLeft, Download, Folder, X } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
+import bannerImg from "@/assets/conference/banner.jpeg";
+import conferencePdf1 from "@/assets/conference/Humanities Conference presentation June 2026.pdf";
+import conferencePdf2 from "@/assets/conference/RISE-Europe_Presentation_June 2026.pdf";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -24,7 +27,30 @@ interface Item {
   src: string;
 }
 
+const conferenceGlob = import.meta.glob("/src/assets/conference/*.jpeg", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+
+const conferencePhotos = Object.entries(conferenceGlob)
+  .filter(([path]) => !path.endsWith("/banner.jpeg"))
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, url]) => url);
+
+const onlineConferenceFolder = "Online Conference — 26–27 June 2026";
+
+const conferencePdfs = [
+  { label: "Humanities Conference Presentation", href: conferencePdf1 },
+  { label: "RISE-Europe Presentation", href: conferencePdf2 },
+];
+
 const items: Item[] = [
+  { category: onlineConferenceFolder, caption: "Conference banner", src: bannerImg },
+  ...conferencePhotos.map((src, i) => ({
+    category: onlineConferenceFolder,
+    caption: `Online Conference, 26–27 June 2026 — photo ${i + 1}`,
+    src,
+  })),
   { category: "Conferences", caption: "Plenary session, Braga 2025", src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80" },
   { category: "Conferences", caption: "Keynote address", src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&q=80" },
   { category: "Workshops", caption: "Research methods workshop", src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" },
@@ -35,7 +61,7 @@ const items: Item[] = [
   { category: "Certificates", caption: "Closing certificates", src: "https://images.unsplash.com/photo-1559223607-a43c990c692c?w=1200&q=80" },
 ];
 
-const folders = ["Conferences", "Workshops", "Cultural", "Certificates"] as const;
+const folders = [onlineConferenceFolder, "Conferences", "Workshops", "Cultural", "Certificates"] as const;
 
 function GalleryPage() {
   const [openFolder, setOpenFolder] = useState<(typeof folders)[number] | null>(null);
@@ -103,6 +129,22 @@ function GalleryPage() {
               </span>
               <h2 className="font-display text-2xl font-semibold text-primary">{openFolder}</h2>
             </div>
+
+            {openFolder === onlineConferenceFolder && (
+              <div className="mt-6 flex flex-wrap gap-3">
+                {conferencePdfs.map((pdf) => (
+                  <a
+                    key={pdf.href}
+                    href={pdf.href}
+                    download
+                    className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:brightness-95"
+                  >
+                    <Download className="h-4 w-4" />
+                    {pdf.label}
+                  </a>
+                ))}
+              </div>
+            )}
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {photosInFolder.map((it, i) => (
