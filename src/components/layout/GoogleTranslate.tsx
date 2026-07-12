@@ -77,7 +77,7 @@ export function LanguageToggle() {
       onClick={toggle}
       aria-label="Toggle language between English and Portuguese"
       translate="no"
-      className="notranslate grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border text-xs font-semibold text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
+      className="grid h-9 w-9 shrink-0 place-items-center rounded-full border-3 border-black text-xs font-semibold text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
     >
       {lang === "en" ? "PT" : "EN"}
     </button>
