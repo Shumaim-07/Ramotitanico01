@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
+import emailjs from "@emailjs/browser";
 
 export const Route = createFileRoute("/become-a-consultant")({
   head: () => ({
@@ -36,6 +37,7 @@ const schema = z.object({
   name: z.string().trim().min(2, "Name required").max(120),
   email: z.string().trim().email("Valid email required").max(200),
   country: z.string().trim().min(2, "Country required").max(80),
+  expertise: z.string().trim().min(2, "Area of expertise required").max(120),
   message: z.string().trim().min(20, "Please share more about your background").max(2000),
 });
 
@@ -53,9 +55,25 @@ function ConsultantPage() {
       setSubmitting(false);
       return;
     }
-    await new Promise((r) => setTimeout(r, 600));
-    toast.success("Application received. Our team will review and respond within ten business days.");
-    form.reset();
+    try {
+      await emailjs.send(
+        "service_jp0tlbk",
+        "template_mr3b1rf",
+        {
+          name: parsed.data.name,
+          email: parsed.data.email,
+          country: parsed.data.country,
+          expertise: parsed.data.expertise,
+          message: parsed.data.message,
+        },
+        "HhAU4iWFJNLELPwv3"
+      );
+      toast.success("Application received. Our team will review and respond within ten business days.");
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send application.");
+    }
     setSubmitting(false);
   };
 

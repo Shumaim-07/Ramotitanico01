@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
-import { Users2, Globe2, BookOpen, ShieldCheck, UserCheck } from "lucide-react";
+import { Users2, Globe2, BookOpen, ShieldCheck, UserCheck, Award, Building2 } from "lucide-react";
 
 export const Route = createFileRoute("/editorial-board")({
   head: () => ({
@@ -20,6 +20,7 @@ export const Route = createFileRoute("/editorial-board")({
 interface Editor {
   name: string;
   role: string;
+  affiliation?: string;
   description?: string;
   icon?: React.ElementType;
 }
@@ -28,6 +29,7 @@ const chiefEditors: Editor[] = [
   { 
     name: "Dr. Rasib Mahmood", 
     role: "Editor-in-Chief",
+    affiliation: "Islamia College (University) Peshawar, Pakistan",
     description: "Oversees editorial strategy, final decisions, and journal policy."
   },
   { 
@@ -45,16 +47,52 @@ const associateEditors: Editor[] = [
   },
 ];
 
-const boardMembers = [
-  { name: "International Academics", role: "Editorial Board", description: "Experts from literature, linguistics, cultural studies, education, translation studies, and interdisciplinary humanities." },
+// Editorial Board Members (International Board)
+const editorialBoardMembers: Editor[] = [
+  { 
+    name: "Dr. Boothenia Majoul",
+    role: "Editorial Board Member",
+    affiliation: "University of Carthage, Tunisia",
+  },
+  { 
+    name: "Dr. Boyarkina Iren",
+    role: "Editorial Board Member",
+    affiliation: "Sapienza University of Rome, Italy",
+  },
+  { 
+    name: "Dr. Azadeh Mehrpouyan",
+    role: "Editorial Board Member",
+    affiliation: "University of Velayat, Iran",
+  },
+  { 
+    name: "Dr. Iman Al-Khalidi",
+    role: "Editorial Board Member",
+    affiliation: "University of Technology and Applied Sciences, Oman",
+  },
 ];
 
-const advisoryBoard = [
-  { name: "Senior Scholars & Professionals", role: "Advisory Board", description: "Guide the journal's academic direction and strategic development." },
-];
-
-const reviewersPanel = [
-  { name: "Subject Specialists", role: "Reviewers' Panel", description: "Responsible for conducting double-blind peer review across all subject areas." },
+// Advisory Board Members (separate, distinct members)
+const advisoryBoardMembers: Editor[] = [
+  {
+    name: "Dr. Nailah Riaz",
+    role: "Advisory Board Member",
+    affiliation: "The University of Faisalabad, Pakistan",
+  },
+   {
+    name: "Dr. Rasib Mahmood",
+    role: "Advisory Board Member",
+    affiliation: "Islamia College (University) Peshawar, Pakistan",
+  },
+   {
+    name: "Dr. Boothenia Majoul",
+    role: "Advisory Board Member",
+    affiliation: "University of Carthage, Tunisia",
+  },
+  {
+    name: "Dr. Eng. Vimbai Pachawa CEng MIAgre",
+    role: "Advisory Board Member",
+    affiliation: "UK",
+  },
 ];
 
 function EditorCard({ e, featured = false }: { e: Editor; featured?: boolean }) {
@@ -72,7 +110,15 @@ function EditorCard({ e, featured = false }: { e: Editor; featured?: boolean }) 
       <h3 className={`mt-5 font-display font-semibold text-primary ${featured ? "text-2xl" : "text-lg"}`}>
         {e.name}
       </h3>
-      <div className="mt-1 text-xs font-medium uppercase tracking-wider text-accent-foreground/80">{e.role}</div>
+      <div className="mt-1 text-xs font-medium uppercase tracking-wider text-accent-foreground/80">
+        {e.role}
+      </div>
+      {e.affiliation && (
+        <div className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
+          <Building2 className="h-3 w-3" />
+          <span>{e.affiliation}</span>
+        </div>
+      )}
       {e.description && (
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{e.description}</p>
       )}
@@ -113,37 +159,39 @@ function EditorialBoardPage() {
         </section>
       </div>
 
-      {/* Editorial Board */}
+      {/* Editorial Board - International Board */}
       <section className="container-page py-16">
-        <SectionTitle eyebrow="International Board" title="Editorial Board" />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {boardMembers.map((e) => (
-            <EditorCard key={e.role} e={{ ...e, icon: Users2 }} />
+        <SectionTitle 
+          eyebrow="International Board" 
+          title="Editorial Board" 
+        />
+        <div className="mt-4 text-sm text-muted-foreground">
+          <p>International scholars and experts who review and evaluate submissions to ensure academic excellence and global perspective.</p>
+        </div>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {editorialBoardMembers.map((e, index) => (
+            <EditorCard key={index} e={{ ...e, icon: Users2 }} />
           ))}
         </div>
       </section>
 
-      {/* Advisory Board */}
+      {/* Advisory Board - Separate Section */}
       <div className="bg-surface">
         <section className="container-page py-16">
-          <SectionTitle eyebrow="Advisory" title="Advisory Board" />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {advisoryBoard.map((e) => (
-              <EditorCard key={e.role} e={{ ...e, icon: Globe2 }} />
+          <SectionTitle 
+            eyebrow="Strategic Guidance" 
+            title="Advisory Board" 
+          />
+          <div className="mt-4 text-sm text-muted-foreground">
+            <p>Distinguished scholars and professionals who provide strategic direction and ensure the journal's continued academic excellence.</p>
+          </div>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {advisoryBoardMembers.map((e, index) => (
+              <EditorCard key={index} e={{ ...e, icon: Globe2 }} />
             ))}
           </div>
         </section>
       </div>
-
-      {/* Reviewers' Panel */}
-      <section className="container-page py-16">
-        <SectionTitle eyebrow="Peer Review" title="Reviewers' Panel" />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {reviewersPanel.map((e) => (
-            <EditorCard key={e.role} e={{ ...e, icon: ShieldCheck }} />
-          ))}
-        </div>
-      </section>
     </>
   );
 }
