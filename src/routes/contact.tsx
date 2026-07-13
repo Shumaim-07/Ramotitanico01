@@ -96,8 +96,8 @@ setSubmitting(false);
                 value="info@ramotitanico.pt"
                 href="mailto:info@ramotitanico.pt"
               />
-              <Item icon={Phone} label="Phone" value="+351 9288 310 629" href="tel:+351000000000" />
-              <Item icon={MessageCircle} label="WhatsApp" value="+351 9288 310 629" />
+              <Item icon={Phone} label="Phone" value="+351 928 310 629" href="tel:+351 928 310 629" />
+              <Item icon={MessageCircle} label="WhatsApp" value="+351 928 310 629" href="https://wa.me/351928310629" />
             </ul>
 
             <div className="mt-10">

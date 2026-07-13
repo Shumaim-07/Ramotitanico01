@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { GraduationCap, Mail, MapPin, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
 import { toast } from "sonner";
 import type { FormEvent } from "react";
+import logo from "@/assets/footerlogo.png";
 
 export function Footer() {
   const onSubscribe = (e: FormEvent<HTMLFormElement>) => {
@@ -21,13 +22,8 @@ export function Footer() {
       <div className="container-page py-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-md bg-accent text-accent-foreground">
-                <GraduationCap className="h-5 w-5" />
-              </span>
-              <span className="font-display text-xl font-semibold">Ramotitanico</span>
-            </div>
-            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/75">
+            <img src={logo} alt="Ramotitanico" className="h-28 w-auto object-contain" />
+            <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">
               A Portugal-based multidisciplinary organization advancing education, research,
               innovation, sustainability, and global collaboration.
             </p>
@@ -71,7 +67,9 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span>+351 9288 310 629</span>
+                <a href="tel:+351 928 310 629" className="hover:text-accent">
+                  +351 928 310 629
+                </a>
               </li>
             </ul>
             <div className="mt-5 flex gap-2">
