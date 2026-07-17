@@ -8,9 +8,17 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Ramotitanico" },
-      { name: "description", content: "Our mission, vision, and the values that drive Ramotitanico's work across education, construction, transport, and agriculture — from Braga to the world." },
+      {
+        name: "description",
+        content:
+          "Our mission, vision, and the values that drive Ramotitanico's work across education, construction, transport, and agriculture — from Braga to the world.",
+      },
       { property: "og:title", content: "About — Ramotitanico" },
-      { property: "og:description", content: "Mission, vision, and core values of Ramotitanico — a Portugal-based organisation operating across four sectors." },
+      {
+        property: "og:description",
+        content:
+          "Mission, vision, and core values of Ramotitanico — a Portugal-based organisation operating across four sectors.",
+      },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -19,12 +27,36 @@ export const Route = createFileRoute("/about")({
 });
 
 const values = [
-  { icon: Lightbulb, title: "Innovation", desc: "We champion original thinking and rigorous experimentation across disciplines." },
-  { icon: ShieldCheck, title: "Integrity", desc: "Our editorial, financial, and academic practices are governed by transparent standards." },
-  { icon: Leaf, title: "Sustainability", desc: "Programmes are designed for lasting institutional and environmental impact." },
-  { icon: Award, title: "Excellence", desc: "We benchmark our work against the highest international academic conventions." },
-  { icon: Users2, title: "Collaboration", desc: "We convene diverse voices — disciplines, geographies, generations — around shared questions." },
-  { icon: Globe2, title: "Global Outlook", desc: "We treat knowledge as a planetary inheritance, not a regional commodity." },
+  {
+    icon: Lightbulb,
+    title: "Innovation",
+    desc: "We champion original thinking and rigorous experimentation across disciplines.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Integrity",
+    desc: "Our editorial, financial, and academic practices are governed by transparent standards.",
+  },
+  {
+    icon: Leaf,
+    title: "Sustainability",
+    desc: "Programmes are designed for lasting institutional and environmental impact.",
+  },
+  {
+    icon: Award,
+    title: "Excellence",
+    desc: "We benchmark our work against the highest international academic conventions.",
+  },
+  {
+    icon: Users2,
+    title: "Collaboration",
+    desc: "We convene diverse voices — disciplines, geographies, generations — around shared questions.",
+  },
+  {
+    icon: Globe2,
+    title: "Global Outlook",
+    desc: "We treat knowledge as a planetary inheritance, not a regional commodity.",
+  },
 ];
 
 function AboutPage() {
@@ -39,7 +71,10 @@ function AboutPage() {
       <section className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div className="space-y-5 text-foreground/85">
-            <SectionTitle eyebrow="Who We Are" title="A Portugal-Based Multidisciplinary Organisation." />
+            <SectionTitle
+              eyebrow="Who We Are"
+              title="A Portugal-Based Multidisciplinary Organisation."
+            />
             <p className="text-lg leading-relaxed">
               Ramotitanico operates from Braga across four interconnected sectors: education,
               construction, transport, and agriculture. We advance research and learning through
@@ -48,10 +83,10 @@ function AboutPage() {
               agricultural development through expert consultancy.
             </p>
             <p className="leading-relaxed">
-              We were established to address structural gaps where expertise and opportunity fail
-              to meet. Today, that ambition extends from academic conferences and publications
-              through to built infrastructure, accessible mobility, and resilient food systems —
-              all anchored in the same commitment to quality, sustainability, and long-term impact.
+              We were established to address structural gaps where expertise and opportunity fail to
+              meet. Today, that ambition extends from academic conferences and publications through
+              to built infrastructure, accessible mobility, and resilient food systems — all
+              anchored in the same commitment to quality, sustainability, and long-term impact.
             </p>
           </div>
           <img
@@ -69,20 +104,24 @@ function AboutPage() {
         <div className="container-page grid gap-10 md:grid-cols-2">
           <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-foreground/80">
-              <span className="rounded-full bg-accent-soft px-3 py-1 text-accent-foreground">Our Vision</span>
+              <span className="rounded-full bg-accent-soft px-3 py-1 text-accent-foreground">
+                Our Vision
+              </span>
             </span>
             <h3 className="mt-4 font-display text-2xl font-semibold text-primary">
               A Connected Scholarly World that Serves Society.
             </h3>
             <p className="mt-3 leading-relaxed text-foreground/80">
-              We envision an international academic ecosystem in which knowledge moves freely
-              across borders, disciplines, and sectors — and in which scholarship is held
-              accountable to the societies that sustain it.
+              We envision an international academic ecosystem in which knowledge moves freely across
+              borders, disciplines, and sectors — and in which scholarship is held accountable to
+              the societies that sustain it.
             </p>
           </div>
           <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-foreground/80">
-              <span className="rounded-full bg-accent-soft px-3 py-1 text-accent-foreground">Our Mission</span>
+              <span className="rounded-full bg-accent-soft px-3 py-1 text-accent-foreground">
+                Our Mission
+              </span>
             </span>
             <h3 className="mt-4 font-display text-2xl font-semibold text-primary">
               Build Systems — Academic, Physical, and Social — that Create Lasting Value.
@@ -104,7 +143,10 @@ function AboutPage() {
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((v) => (
-            <div key={v.title} className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)]">
+            <div
+              key={v.title}
+              className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)]"
+            >
               <span className="grid h-12 w-12 place-items-center rounded-lg bg-accent-soft text-accent-foreground">
                 <v.icon className="h-6 w-6" />
               </span>
@@ -125,17 +167,19 @@ function AboutPage() {
           </h2>
           <div className="mt-6 space-y-4 text-primary-foreground/80 leading-relaxed">
             <p>
-              Across more than forty countries, Ramotitanico has supported universities in
-              redesigning curricula, organised international conferences, edited indexed
-              proceedings, and facilitated mobility for early-career researchers. In Portugal,
-              we have delivered construction projects, launched a peer-to-peer car rental
-              marketplace, and supported farms through agritech and sustainable practices advisory.
+              Across more than forty countries, Ramotitanico aims to support universities and
+              academic institutions in redesigning curricula, organizing international conferences,
+              developing indexed publications, and facilitating mobility opportunities for
+              early-career researchers. In Portugal, the organization envisions expanding its
+              contributions to include construction and infrastructure development, innovative
+              transport solutions such as peer-to-peer mobility platforms, and agricultural
+              advancement through agritech initiatives and sustainable farming advisory.
             </p>
             <p>
-              Our impact is measured not in headlines but in the quiet, compounding work of
-              improved courses, sharper research, stronger institutions, buildings that endure,
-              cars that earn, and farms that thrive. We are proud to be a determined contributor
-              across each of the four sectors we serve.
+              Our approach is grounded in long-term impact—through stronger academic programs,
+              meaningful research collaborations, sustainable infrastructure, efficient mobility
+              solutions, and resilient agricultural practices. Ramotitanico aspires to be a
+              dedicated and evolving contributor across the four sectors it is committed to serving.
             </p>
           </div>
         </div>

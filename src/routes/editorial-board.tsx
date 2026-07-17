@@ -29,7 +29,6 @@ const chiefEditors: Editor[] = [
   { 
     name: "Dr. Rasib Mahmood", 
     role: "Editor-in-Chief",
-    affiliation: "Islamia College (University) Peshawar, Pakistan",
     description: "Oversees editorial strategy, final decisions, and journal policy."
   },
   { 
